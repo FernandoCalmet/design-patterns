@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Subject {
-	
+
    private List<Observer> observers = new ArrayList<Observer>();
    private int state;
 
@@ -33,14 +33,14 @@ public class Subject {
    }
 
    public void attach(Observer observer){
-      observers.add(observer);		
+      observers.add(observer);
    }
 
    public void notifyAllObservers(){
       for (Observer observer : observers) {
          observer.update();
       }
-   } 	
+   }
 }
 ```
 
@@ -73,7 +73,7 @@ public class BinaryObserver extends Observer{
 
    @Override
    public void update() {
-      System.out.println( "Binary String: " + Integer.toBinaryString( subject.getState() ) ); 
+      System.out.println( "Binary String: " + Integer.toBinaryString( subject.getState() ) );
    }
 }
 ```
@@ -90,7 +90,7 @@ public class OctalObserver extends Observer{
 
    @Override
    public void update() {
-     System.out.println( "Octal String: " + Integer.toOctalString( subject.getState() ) ); 
+     System.out.println( "Octal String: " + Integer.toOctalString( subject.getState() ) );
    }
 }
 ```
@@ -107,7 +107,7 @@ public class HexaObserver extends Observer{
 
    @Override
    public void update() {
-      System.out.println( "Hex String: " + Integer.toHexString( subject.getState() ).toUpperCase() ); 
+      System.out.println( "Hex String: " + Integer.toHexString( subject.getState() ).toUpperCase() );
    }
 }
 ```
@@ -127,9 +127,9 @@ public class ObserverPatternDemo {
       new OctalObserver(subject);
       new BinaryObserver(subject);
 
-      System.out.println("First state change: 15");	
+      System.out.println("First state change: 15");
       subject.setState(15);
-      System.out.println("Second state change: 10");	
+      System.out.println("Second state change: 10");
       subject.setState(10);
    }
 }
@@ -153,6 +153,7 @@ Binary String: 1010
 :octocat: [Check more about Design Patterns in my repository.](https://github.com/FernandoCalmet/Design-Patterns)
 
 ## Support me ☕💖
+
 <a href='https://ko-fi.com/fernandocalmet' target='_blank'>
   <img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' />
 </a>

@@ -61,6 +61,18 @@ public class Rectangle implements Shape {
 }
 ```
 
+_Square.java_
+
+```java
+public class Square implements Shape {
+
+    @Override
+    public void draw() {
+        System.out.println("Inside Square::draw() method.");
+    }
+}
+```
+
 ## Step 3
 
 Create an Abstract class to get factories for Normal and Rounded Shape Objects.

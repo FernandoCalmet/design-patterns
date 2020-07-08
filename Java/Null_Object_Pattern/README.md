@@ -1,4 +1,4 @@
-# Null Object Pattern Pattern
+# Null Object Pattern
 
 In Null Object pattern, a null object replaces check of NULL object instance. Instead of putting if check for a null value, Null Object reflects a do nothing relationship. Such Null object can also be used to provide default behaviour in case data is not available.
 

@@ -1,48 +1,48 @@
-# DESIGN PATTERNS
+# PATRONES DE DISEÑO
 
-Design patterns represent the best practices used by experienced object-oriented software developers. Design patterns are solutions to general problems that software developers faced during software development. These solutions were obtained by trial and error by numerous software developers over quite a substantial period of time.
+Los patrones de diseño representan las mejores prácticas utilizadas por los desarrolladores de software orientados a objetos con experiencia. Los patrones de diseño son soluciones a los problemas generales que enfrentan los desarrolladores de software durante el desarrollo de software. Numerosos desarrolladores de software obtuvieron estas soluciones mediante prueba y error durante un período de tiempo considerable.
 
-## Audience
+## Audiencia
 
-This reference has been prepared for the experienced developers to provide best solutions to certain problems faced during software development and for un-experienced developers to learn software design in an easy and faster way.
+Esta referencia ha sido preparada para que los desarrolladores experimentados proporcionen las mejores soluciones a ciertos problemas que se enfrentan durante el desarrollo de software y para que los desarrolladores sin experiencia aprendan el diseño de software de una manera fácil y rápida.
 
-## Prerequisites
+## Prerrequisitos
 
-Before you start proceeding with this tutorial, I'm making an assumption that you are already aware about basic java programming concepts.
+Antes de comenzar con este tutorial, supongo que ya conoce los conceptos básicos de programación de Java.
 
-> Design patterns represent the best practices used by experienced object-oriented software developers. Design patterns are solutions to general problems that software developers faced during software development. These solutions were obtained by trial and error by numerous software developers over quite a substantial period of time.
+> Los patrones de diseño representan las mejores prácticas utilizadas por los desarrolladores de software orientados a objetos con experiencia. Los patrones de diseño son soluciones a los problemas generales que enfrentan los desarrolladores de software durante el desarrollo de software. Numerosos desarrolladores de software obtuvieron estas soluciones mediante prueba y error durante un período de tiempo considerable.
 
-## What is Gang of Four (GOF)?
+## Qué es Gang of Four (GOF)
 
-In 1994, four authors Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides published a book titled Design Patterns - Elements of Reusable Object-Oriented Software which initiated the concept of Design Pattern in Software development.
+En 1994, cuatro autores Erich Gamma, Richard Helm, Ralph Johnson y John Vlissides publicaron un libro titulado Design Patterns - Elements of Reusable Object-Oriented Software que inició el concepto de Design Pattern en el desarrollo de software.
 
-These authors are collectively known as Gang of Four (GOF). According to these authors design patterns are primarily based on the following principles of object orientated design.
+Estos autores se conocen colectivamente como Gang of Four (GOF). Según estos autores, los patrones de diseño se basan principalmente en los siguientes principios de diseño orientado a objetos.
 
-- Program to an interface not an Implementación.
-- Favor object composition over inheritance.
+- Programa a una interfaz no a una Implementación.
+- Favorecer la composición de objetos sobre la herencia.
 
-## Usage of Design Pattern
+## Uso de patrón de diseño
 
-Design Patterns have two main usages in software development.
+Los patrones de diseño tienen dos usos principales en el desarrollo de software.
 
-### Common platform for developers
+### Plataforma común para desarrolladores
 
-Design patterns provide a standard terminology and are specific to particular scenario. For example, a singleton design pattern signifies use of single object so all developers familiar with single design pattern will make use of single object and they can tell each other that program is following a singleton pattern.
+Los patrones de diseño proporcionan una terminología estándar y son específicos para un escenario particular. Por ejemplo, un patrón de diseño singleton significa el uso de un solo objeto, por lo que todos los desarrolladores familiarizados con el patrón de diseño único utilizarán un solo objeto y pueden decirse entre sí que el programa sigue un patrón singleton.
 
-### Best Practices
+### Mejores prácticas
 
-Design patterns have been evolved over a long period of time and they provide best solutions to certain problems faced during software development. Learning these patterns helps unexperienced developers to learn software design in an easy and faster way.
+Los patrones de diseño han evolucionado durante un largo período de tiempo y brindan las mejores soluciones a ciertos problemas que se enfrentan durante el desarrollo de software. El aprendizaje de estos patrones ayuda a los desarrolladores sin experiencia a aprender a diseñar software de una manera fácil y rápida.
 
-## Types of Design Patterns
+## Tipos de patrones de diseño
 
-As per the design pattern reference book Design Patterns - Elements of Reusable Object-Oriented Software , there are 23 design patterns which can be classified in three categories: Creational, Structural and Behavioral patterns. We'll also discuss another category of design pattern: J2EE design patterns.
+Según el libro de referencia de patrones de diseño Design Patterns - Elements of Reusable Object-Oriented Software, hay 23 patrones de diseño que se pueden clasificar en tres categorías: patrones de creación, estructurales y de comportamiento. También discutiremos otra categoría de patrón de diseño: patrones de diseño J2EE.
 
-S.N. | Pattern & Description
+S.N. | Patrón y descripción
 ------------ | -------------
-1 | **Creational Patterns**  These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator. This gives program more flexibility in deciding which objects need to be created for a given use case.
-2 | **Structural Patterns** These design patterns concern class and object composition. Concept of inheritance is used to compose interfaces and define ways to compose objects to obtain new functionalities.
-3 | **Behavioral Patterns** These design patterns are specifically concerned with communication between objects.
-4 | **J2EE Patterns** These design patterns are specifically concerned with the presentation tier. These patterns are identified by Sun Java Center.
+1 | **Patrones de creacionales**  Estos patrones de diseño proporcionan una forma de crear objetos mientras se oculta la lógica de creación, en lugar de crear instancias de objetos directamente utilizando un nuevo operador. Esto le da al programa más flexibilidad para decidir qué objetos deben crearse para un caso de uso dado.
+2 | **Patrones estructurales** Estos patrones de diseño se refieren a la composición de clases y objetos. El concepto de herencia se utiliza para componer interfaces y definir formas de componer objetos para obtener nuevas funcionalidades.
+3 | **Patrones de comportamiento** Estos patrones de diseño se refieren específicamente a la comunicación entre objetos.
+4 | **Patrones J2EE** Estos patrones de diseño se refieren específicamente al nivel de presentación. Sun Java Center identifica estos patrones.
 
 ---
 :octocat: [Check more about me.](https://github.com/FernandoCalmet)

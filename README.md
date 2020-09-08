@@ -18,7 +18,7 @@ In 1994, four authors Erich Gamma, Richard Helm, Ralph Johnson and John Vlisside
 
 These authors are collectively known as Gang of Four (GOF). According to these authors design patterns are primarily based on the following principles of object orientated design.
 
-- Program to an interface not an implementation.
+- Program to an interface not an Implementación.
 - Favor object composition over inheritance.
 
 ## Usage of Design Pattern
@@ -44,10 +44,7 @@ S.N. | Pattern & Description
 3 | **Behavioral Patterns** These design patterns are specifically concerned with communication between objects.
 4 | **J2EE Patterns** These design patterns are specifically concerned with the presentation tier. These patterns are identified by Sun Java Center.
 
-:octocat: [Check more about Design Patterns in my repository.](https://github.com/FernandoCalmet/Design-Patterns)
+---
+:octocat: [Check more about me.](https://github.com/FernandoCalmet)
 
-## Support me ☕💖
-
-<a href='https://ko-fi.com/fernandocalmet' target='_blank'>
-  <img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' />
-</a>
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T41JKMI)

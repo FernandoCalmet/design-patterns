@@ -1,0 +1,9 @@
+{
+    "name": "repository-pattern/php-7",
+    "autoload": {
+        "psr-4": {
+            "Sales\\": "sales/",
+            "App\\": "app/"
+        }
+    }
+}

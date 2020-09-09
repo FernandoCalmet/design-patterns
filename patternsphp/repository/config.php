@@ -4,5 +4,9 @@ define('__CONFIG__', [
         'host' => 'mysql:host=localhost;dbname=sales_db;charset=utf8',
         'user' => 'root',
         'password' => ''
+    ],
+    'log' => [
+        'path' => 'log/',
+        'channel' => 'channel_sales'
     ]
 ]);

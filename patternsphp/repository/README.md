@@ -187,6 +187,9 @@ class OrderService
         $result = null;
 
         try {
+            // Begin transacation
+            $this->_db->beginTransaction();
+
             $data = $this->_orderRepository->find($id);
 
             if ($data) {
@@ -199,6 +202,7 @@ class OrderService
                 $result->detail = $this->getDetail($result->id);
             }
         } catch (PDOException $ex) {
+            $this->_db->rollBack();
             print($ex->getMessage());
         }
 
@@ -210,12 +214,16 @@ class OrderService
         $result = [];
 
         try {
+            // Begin transacation
+            $this->_db->beginTransaction();
+
             $result = $this->_orderDetailRepository->findAllByOrderId($order_id);
 
             foreach ($result as $item) {
                 $item->product = $this->_productRepository->find($item->product_id);
             }
         } catch (PDOException $ex) {
+            $this->_db->rollBack();
             print($ex->getMessage());
         }
 
@@ -237,6 +245,7 @@ class OrderService
             $this->_db->commit();
         } catch (PDOException $ex) {
             $this->_db->rollBack();
+            print($ex->getMessage());
         }
     }
 
@@ -284,6 +293,9 @@ class ProductService
         $result = [];
 
         try {
+            // Begin transacation
+            $this->_db->beginTransaction();
+
             $result = $this->_productRepository->findAll();
         } catch (PDOException $ex) {
             print $ex->getMessage();
@@ -297,8 +309,12 @@ class ProductService
         $result = null;
 
         try {
+            // Begin transacation
+            $this->_db->beginTransaction();
+
             $result = $this->_productRepository->find($id);
         } catch (PDOException $ex) {
+            $this->_db->rollBack();
             print $ex->getMessage();
         }
 
@@ -308,8 +324,12 @@ class ProductService
     public function create(Product $model): void
     {
         try {
+            // Begin transacation
+            $this->_db->beginTransaction();
+
             $this->_productRepository->add($model);
         } catch (PDOException $ex) {
+            $this->_db->rollBack();
             print $ex->getMessage();
         }
     }
@@ -317,8 +337,12 @@ class ProductService
     public function update(Product $model): void
     {
         try {
+            // Begin transacation
+            $this->_db->beginTransaction();
+
             $this->_productRepository->update($model);
         } catch (PDOException $ex) {
+            $this->_db->rollBack();
             print $ex->getMessage();
         }
     }
@@ -326,8 +350,12 @@ class ProductService
     public function delete(int $id): void
     {
         try {
+            // Begin transacation
+            $this->_db->beginTransaction();
+
             $this->_productRepository->remove($id);
         } catch (PDOException $ex) {
+            $this->_db->rollBack();
             print $ex->getMessage();
         }
     }
@@ -694,6 +722,143 @@ class UserRepository
         );
         // 02. Execute query
         $stm->execute(['id' => $id]);
+    }
+}
+
+```
+
+## Paso 6
+
+Agregar el paquete de dependencia de monolog para gestionar logs.
+
+```bash
+composer require monolog/monolog
+```
+
+Crear una clase de contenedor.
+
+> sales/Container.php
+
+```php
+<?php
+
+namespace Sales;
+
+class Container
+{
+    private static $dependencies = [];
+
+    public static function set(string $key, $func)
+    {
+        self::$dependencies[$key] = $func;
+    }
+
+    public static function get(string $key)
+    {
+        return self::$dependencies[$key]();
+    }
+}
+```
+
+Agregar al archivo de **Config.php** los parametros para inicializar monolog.
+
+> config.php
+
+```php
+<?php
+define('__CONFIG__', [
+    'db' => [
+        'host' => 'mysql:host=localhost;dbname=sales_db;charset=utf8',
+        'user' => 'root',
+        'password' => ''
+    ],
+    'log' => [
+        'path' => 'log/',
+        'channel' => 'sales'
+    ]
+]);
+```
+
+Creamos el archivo inicial donde probaremos esta solución.
+
+> index.php
+
+```php
+<?php
+require_once 'vendor/autoload.php';
+require_once 'config.php';
+
+use Sales\Container;
+
+Container::set('logger', function () {
+    $logger = new \Monolog\Logger(__CONFIG__['log']['channel']);
+    //Handler para trabajar con archivos de texto
+    $file_handler = new \Monolog\Handler\StreamHandler(__CONFIG__['log']['path'] . date('Ymd') . '.log');
+    //Agregar Handler
+    $logger->pushHandler($file_handler);
+
+    return $logger;
+});
+
+// Test Log
+$logger = Container::get('logger');
+$logger->info('Project started');
+```
+
+## Paso 7
+
+Tener en cuenta los niveles de los Logs, leer más al respecto en <https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md>
+
+```note
+Monolog supports the logging levels described by RFC 5424.
+
+DEBUG (100): Detailed debug information.
+
+INFO (200): Interesting events. Examples: User logs in, SQL logs.
+
+NOTICE (250): Normal but significant events.
+
+WARNING (300): Exceptional occurrences that are not errors. Examples: Use of deprecated APIs, poor use of an API, undesirable things that are not necessarily wrong.
+
+ERROR (400): Runtime errors that do not require immediate action but should typically be logged and monitored.
+
+CRITICAL (500): Critical conditions. Example: Application component unavailable, unexpected exception.
+
+ALERT (550): Action must be taken immediately. Example: Entire website down, database unavailable, etc. This should trigger the SMS alerts and wake you up.
+
+EMERGENCY (600): Emergency: system is unusable.
+```
+
+Agregar el control de logs en los servicios.
+
+```php
+<?php
+
+namespace App\Services;
+
+use Sales\Container;
+
+class ExampleService
+{
+    //otros atributos
+    private $_logger;
+
+    //constructor
+    public function __construct()
+    {
+        //instancia de otros atributos
+        $this->_logger = Container::get('logger');
+    }
+
+    public function someFunction()
+    {
+        try{
+            $this->logger->info('Empezó el proceso del bloque'); //log info
+            //bloque de codigo
+            $this->logger->info('Se completo el proceso del bloque'); //log info
+        } catch(PDOException $ex){
+            $this->logger->error($ex->getMessage());
+        }
     }
 }
 

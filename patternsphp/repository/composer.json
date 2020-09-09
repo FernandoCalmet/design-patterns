@@ -5,5 +5,8 @@
             "Sales\\": "sales/",
             "App\\": "app/"
         }
+    },
+    "require": {
+        "monolog/monolog": "^2.1"
     }
 }

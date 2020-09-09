@@ -11,6 +11,14 @@ class ComposerStaticInite1b23ac49452c00c378b3d717274e165
         array (
             'Sales\\' => 6,
         ),
+        'P' => 
+        array (
+            'Psr\\Log\\' => 8,
+        ),
+        'M' => 
+        array (
+            'Monolog\\' => 8,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -21,6 +29,14 @@ class ComposerStaticInite1b23ac49452c00c378b3d717274e165
         'Sales\\' => 
         array (
             0 => __DIR__ . '/../..' . '/sales',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Monolog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
         'App\\' => 
         array (

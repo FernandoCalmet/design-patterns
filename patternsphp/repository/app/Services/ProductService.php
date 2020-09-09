@@ -20,6 +20,9 @@ class ProductService
         $result = [];
 
         try {
+            // Begin transacation
+            $this->_db->beginTransaction();
+
             $result = $this->_productRepository->findAll();
         } catch (PDOException $ex) {
             print $ex->getMessage();
@@ -33,8 +36,12 @@ class ProductService
         $result = null;
 
         try {
+            // Begin transacation
+            $this->_db->beginTransaction();
+
             $result = $this->_productRepository->find($id);
         } catch (PDOException $ex) {
+            $this->_db->rollBack();
             print $ex->getMessage();
         }
 
@@ -44,8 +51,12 @@ class ProductService
     public function create(Product $model): void
     {
         try {
+            // Begin transacation
+            $this->_db->beginTransaction();
+
             $this->_productRepository->add($model);
         } catch (PDOException $ex) {
+            $this->_db->rollBack();
             print $ex->getMessage();
         }
     }
@@ -53,8 +64,12 @@ class ProductService
     public function update(Product $model): void
     {
         try {
+            // Begin transacation
+            $this->_db->beginTransaction();
+
             $this->_productRepository->update($model);
         } catch (PDOException $ex) {
+            $this->_db->rollBack();
             print $ex->getMessage();
         }
     }
@@ -62,8 +77,12 @@ class ProductService
     public function delete(int $id): void
     {
         try {
+            // Begin transacation
+            $this->_db->beginTransaction();
+
             $this->_productRepository->remove($id);
         } catch (PDOException $ex) {
+            $this->_db->rollBack();
             print $ex->getMessage();
         }
     }

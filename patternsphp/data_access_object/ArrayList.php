@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 class ArrayList
 {
-    private $list = array();
+    public $list = array();
 
     public function Add($obj)
     {

@@ -28,7 +28,7 @@ class StudentDaoImpl implements StudentDao
     public function deleteStudent(Student $student): void
     {
         $this->students->remove($student->getRollNo());
-        print sprintf("Student: Roll No %s , deleted from database", $student->getRollNo());
+        print sprintf("Student: Roll No %s , deleted from database" . PHP_EOL, $student->getRollNo());
     }
 
     //retrive list of students from the database
@@ -45,6 +45,6 @@ class StudentDaoImpl implements StudentDao
     public function updateStudent(Student $student): void
     {
         $this->students->GetObj($student->getRollNo());
-        print sprintf("Student: Roll No %s , updated from database", $student->getRollNo());
+        print sprintf("Student: Roll No %s , updated from database" . PHP_EOL, $student->getRollNo());
     }
 }

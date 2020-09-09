@@ -4,11 +4,11 @@ require_once __DIR__ . '/StudentDao.php';
 require_once __DIR__ . '/StudentDaoImpl.php';
 
 $studentDao = new StudentDaoImpl();
-$students = $studentDao->getAllStudents();
 
 //print all students
-foreach ($students as $student) {
-    print sprintf("Student: [RollNo: %s , Name: %s]", $student->getRollNo(), $student->getName() . PHP_EOL);   
+$students = $studentDao->getAllStudents();
+foreach ($students->list as $student) {
+    print sprintf("Student: [RollNo: %s , Name: %s]" . PHP_EOL, $student->getRollNo(), $student->getName());
 }
 
 //update student
@@ -18,5 +18,4 @@ $studentDao->updateStudent($student);
 
 //get the student
 $student = $studentDao->getStudent(0);
-print(PHP_EOL);
-print sprintf("Student: [RollNo: %s , Name: %s]", $student->getRollNo(), $student->getName());
+print sprintf("Student: [RollNo: %s , Name: %s]" . PHP_EOL, $student->getRollNo(), $student->getName());

@@ -112,7 +112,7 @@ class StudentDaoImpl implements StudentDao
     public function deleteStudent(Student $student): void
     {
         $this->students->remove($student->getRollNo());
-        print sprintf("Student: Roll No %s , deleted from database", $student->getRollNo());
+        print sprintf("Student: Roll No %s , deleted from database" . PHP_EOL, $student->getRollNo());
     }
 
     //retrive list of students from the database
@@ -129,7 +129,7 @@ class StudentDaoImpl implements StudentDao
     public function updateStudent(Student $student): void
     {
         $this->students->GetObj($student->getRollNo());
-        print sprintf("Student: Roll No %s , updated from database", $student->getRollNo());
+        print sprintf("Student: Roll No %s , updated from database" . PHP_EOL, $student->getRollNo());
     }
 }
 ```
@@ -146,24 +146,22 @@ require_once __DIR__ . '/Student.php';
 require_once __DIR__ . '/StudentDao.php';
 require_once __DIR__ . '/StudentDaoImpl.php';
 
-$student = new Student();
 $studentDao = new StudentDaoImpl();
-$students = $studentDao->getAllStudents();
 
 //print all students
-foreach ($student as $students) {
-    print sprintf("Student: [RollNo: %s , Name: %s]", $student->getRollNo(), $student->getName() . PHP_EOL);
+$students = $studentDao->getAllStudents();
+foreach ($students->list as $student) {
+    print sprintf("Student: [RollNo: %s , Name: %s]" . PHP_EOL, $student->getRollNo(), $student->getName());
 }
 
 //update student
-$student = $studentDao->getAllStudents()->GetObj(0);
+$student = $studentDao->getStudent(0);
 $student->setName("Michael");
 $studentDao->updateStudent($student);
 
 //get the student
-$studentDao->getStudent(0);
-print(PHP_EOL);
-print sprintf("Student: [RollNo: %s , Name: %s]", $student->getRollNo(), $student->getName());
+$student = $studentDao->getStudent(0);
+print sprintf("Student: [RollNo: %s , Name: %s]" . PHP_EOL, $student->getRollNo(), $student->getName());
 ```
 
 ## Paso 5

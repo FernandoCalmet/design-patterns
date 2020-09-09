@@ -30,12 +30,12 @@ class Student
     private $_rollNo;
     private $_name;
 
-    public function getRollNo(): string
+    public function getRollNo(): int
     {
         return $this->_rollNo;
     }
 
-    public function setRollNo(string $RollNo): void
+    public function setRollNo(int $RollNo): void
     {
         $this->_rollNo = $RollNo;
     }
@@ -64,11 +64,12 @@ Crear interfaz de objeto de acceso a datos.
 declare(strict_types=1);
 
 require_once __DIR__ . '/ArrayList.php';
+require_once __DIR__ . '/Student.php';
 
 interface StudentDao
 {
     public function getAllStudents(): ArrayList;
-    public function getStudent(int $rollNo): Student;
+    public function getStudent(int $rollNo): ?Student;
     public function updateStudent(Student $student): void;
     public function deleteStudent(Student $student): void;
 }
@@ -86,6 +87,7 @@ Cree una clase concreta implementando la interfaz anterior.
 declare(strict_types=1);
 
 require_once __DIR__ . '/ArrayList.php';
+require_once __DIR__ . '/Student.php';
 
 class StudentDaoImpl implements StudentDao
 {
@@ -95,8 +97,14 @@ class StudentDaoImpl implements StudentDao
     public function __construct()
     {
         $this->students = new ArrayList();
-        $student1 = new Student("Robert", 0);
-        $student2 = new Student("Jhon", 1);
+
+        $student1 = new Student();
+        $student1->setName("Robert");
+        $student1->setRollNo(0);
+        $student2 = new Student();
+        $student2->setName("Jhon");
+        $student2->setRollNo(1);
+
         $this->students->Add($student1);
         $this->students->Add($student2);
     }
@@ -104,7 +112,7 @@ class StudentDaoImpl implements StudentDao
     public function deleteStudent(Student $student): void
     {
         $this->students->remove($student->getRollNo());
-        print sprintf("Student: Roll No %s , deleted from database", $student->getRollNo() . PHP_EOL);
+        print sprintf("Student: Roll No %s , deleted from database", $student->getRollNo());
     }
 
     //retrive list of students from the database
@@ -113,7 +121,7 @@ class StudentDaoImpl implements StudentDao
         return $this->students;
     }
 
-    public function getStudent(int $RollNo): Student
+    public function getStudent(int $RollNo): ?Student
     {
         return $this->students->GetObj($RollNo);
     }
@@ -121,7 +129,7 @@ class StudentDaoImpl implements StudentDao
     public function updateStudent(Student $student): void
     {
         $this->students->GetObj($student->getRollNo());
-        print sprintf("Student: Roll No %s , updated from database", $student->getRollNo() . PHP_EOL);
+        print sprintf("Student: Roll No %s , updated from database", $student->getRollNo());
     }
 }
 ```
@@ -138,22 +146,24 @@ require_once __DIR__ . '/Student.php';
 require_once __DIR__ . '/StudentDao.php';
 require_once __DIR__ . '/StudentDaoImpl.php';
 
+$student = new Student();
 $studentDao = new StudentDaoImpl();
 $students = $studentDao->getAllStudents();
 
 //print all students
 foreach ($student as $students) {
-    print sprintf("Student: [RollNo: %s , Name: %s", $student->getRollNo(), $student->getName());
+    print sprintf("Student: [RollNo: %s , Name: %s]", $student->getRollNo(), $student->getName() . PHP_EOL);
 }
 
 //update student
-$student = $studentDao->getAllStudents()->GetKey(0);
+$student = $studentDao->getAllStudents()->GetObj(0);
 $student->setName("Michael");
 $studentDao->updateStudent($student);
 
 //get the student
 $studentDao->getStudent(0);
-print sprintf("Student: [RollNo: %s , Name: %s", $student->getRollNo(), $student->getName());
+print(PHP_EOL);
+print sprintf("Student: [RollNo: %s , Name: %s]", $student->getRollNo(), $student->getName());
 ```
 
 ## Paso 5
@@ -161,10 +171,10 @@ print sprintf("Student: [RollNo: %s , Name: %s", $student->getRollNo(), $student
 Verifique la salida.
 
 ```note
-Student: [RollNo : 0, Name : Robert ]
-Student: [RollNo : 1, Name : John ]
+Student: [RollNo : 0, Name : Robert]
+Student: [RollNo : 1, Name : John]
 Student: Roll No 0, updated in the database
-Student: [RollNo : 0, Name : Michael ]
+Student: [RollNo : 0, Name : Michael]
 ```
 
 ---

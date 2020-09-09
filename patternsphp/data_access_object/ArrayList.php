@@ -46,5 +46,5 @@ class ArrayList
         } else {
             return $arrKeys[0];
         }
-    }
+    }  
 }

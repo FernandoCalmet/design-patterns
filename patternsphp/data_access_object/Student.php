@@ -7,12 +7,6 @@ class Student
     private $_rollNo;
     private $_name;
 
-    public function __construct(string $name, int $rollNo)
-    {
-        $this->_name = $name;
-        $this->_rollNo = $rollNo;
-    }
-
     public function getRollNo(): int
     {
         return $this->_rollNo;

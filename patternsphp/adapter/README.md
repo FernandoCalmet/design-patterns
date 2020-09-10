@@ -22,142 +22,62 @@ AudioPlayer usa la clase de adaptador MediaAdapter pasándole el tipo de audio d
 
 Cree interfaces para Media Player y Advanced Media Player.
 
-> MediaPlayer.java
+> MediaPlayer.php
 
-```java
-public interface MediaPlayer {
-    public void play(String audioType, String fileName);
-}
+```php
+
 ```
 
-> AdvancedMediaPlayer.java
+> AdvancedMediaPlayer.php
 
-```java
-public interface AdvancedMediaPlayer {
-   public void playVlc(String fileName);
-   public void playMp4(String fileName);
-}
+```php
+
 ```
 
 ## Paso 2
 
 Cree clases concretas implementando la interfaz AdvancedMediaPlayer.
 
-> VlcPlayer.java
+> VlcPlayer.php
 
-```java
-public class VlcPlayer implements AdvancedMediaPlayer{
-   @Override
-   public void playVlc(String fileName) {
-      System.out.println("Playing vlc file. Name: "+ fileName);
-   }
+```php
 
-   @Override
-   public void playMp4(String fileName) {
-      //do nothing
-   }
-}
 ```
 
-> Mp4Player.java
+> Mp4Player.php
 
-```java
-public class Mp4Player implements AdvancedMediaPlayer{
+```php
 
-   @Override
-   public void playVlc(String fileName) {
-      //do nothing
-   }
-
-   @Override
-   public void playMp4(String fileName) {
-      System.out.println("Playing mp4 file. Name: "+ fileName);
-   }
-}
 ```
 
 ## Paso 3
 
 Cree una clase de adaptador implementando la interfaz MediaPlayer.
 
-> MediaAdapter.java
+> MediaAdapter.php
 
-```java
-public class MediaAdapter implements MediaPlayer {
+```php
 
-   AdvancedMediaPlayer advancedMusicPlayer;
-
-   public MediaAdapter(String audioType){
-
-      if(audioType.equalsIgnoreCase("vlc") ){
-         advancedMusicPlayer = new VlcPlayer();
-
-      }else if (audioType.equalsIgnoreCase("mp4")){
-         advancedMusicPlayer = new Mp4Player();
-      }
-   }
-
-   @Override
-   public void play(String audioType, String fileName) {
-
-      if(audioType.equalsIgnoreCase("vlc")){
-         advancedMusicPlayer.playVlc(fileName);
-      }
-      else if(audioType.equalsIgnoreCase("mp4")){
-         advancedMusicPlayer.playMp4(fileName);
-      }
-   }
-}
 ```
 
 ## Paso 4
 
 Cree una clase concreta implementando la interfaz MediaPlayer.
 
-> AudioPlayer.java
+> AudioPlayer.php
 
-```java
-public class AudioPlayer implements MediaPlayer {
-   MediaAdapter mediaAdapter;
+```php
 
-   @Override
-   public void play(String audioType, String fileName) {
-
-      //inbuilt support to play mp3 music files
-      if(audioType.equalsIgnoreCase("mp3")){
-         System.out.println("Playing mp3 file. Name: " + fileName);
-      }
-
-      //mediaAdapter is providing support to play other file formats
-      else if(audioType.equalsIgnoreCase("vlc") || audioType.equalsIgnoreCase("mp4")){
-         mediaAdapter = new MediaAdapter(audioType);
-         mediaAdapter.play(audioType, fileName);
-      }
-
-      else{
-         System.out.println("Invalid media. " + audioType + " format not supported");
-      }
-   }
-}
 ```
 
 ## Paso 5
 
 Utilice AudioPlayer para reproducir diferentes tipos de formatos de audio.
 
-> AdapterPatternDemo.java
+> AdapterPatternDemo.php
 
-```java
-public class AdapterPatternDemo {
-   public static void main(String[] args) {
-      AudioPlayer audioPlayer = new AudioPlayer();
+```php
 
-      audioPlayer.play("mp3", "beyond the horizon.mp3");
-      audioPlayer.play("mp4", "alone.mp4");
-      audioPlayer.play("vlc", "far far away.vlc");
-      audioPlayer.play("avi", "mind me.avi");
-   }
-}
 ```
 
 ## Paso 6

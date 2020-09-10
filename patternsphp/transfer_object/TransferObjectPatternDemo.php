@@ -1,22 +1,20 @@
 <?php
 
-require_once __DIR__ . '/StudentDao.php';
-require_once __DIR__ . '/StudentDaoImpl.php';
-require_once __DIR__ . '/StudentDao.php';
+require_once __DIR__ . '/StudentBO.php';
 
-$studentDao = new StudentDaoImpl();
+$studentBusinessObject = new StudentBO();
 
 //print all students
-$students = $studentDao->getAllStudents();
+$students = $studentBusinessObject->getAllStudents();
 foreach ($students->list as $student) {
     print sprintf("Student: [RollNo: %s , Name: %s]" . PHP_EOL, $student->getRollNo(), $student->getName());
 }
 
 //update student
-$student = $studentDao->getStudent(0);
+$student = $studentBusinessObject->getStudent(0);
 $student->setName("Michael");
-$studentDao->updateStudent($student);
+$studentBusinessObject->updateStudent($student);
 
 //get the student
-$student = $studentDao->getStudent(0);
+$student = $studentBusinessObject->getStudent(0);
 print sprintf("Student: [RollNo: %s , Name: %s]" . PHP_EOL, $student->getRollNo(), $student->getName());

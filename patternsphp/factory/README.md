@@ -110,11 +110,11 @@ class ShapeFactory
         if ($shapeType == null) {
             return null;
         }
-        if (strcasecmp($shapeType, "CIRCLE")) {
+        if (strcasecmp($shapeType, "CIRCLE") == 0) {
             return new Circle();
-        } else if (strcasecmp($shapeType, "RECTANGLE")) {
+        } else if (strcasecmp($shapeType, "RECTANGLE") == 0) {
             return new Rectangle();
-        } else if (strcasecmp($shapeType, "SQUARE")) {
+        } else if (strcasecmp($shapeType, "SQUARE") == 0) {
             return new Square();
         }
 

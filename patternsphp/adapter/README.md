@@ -25,13 +25,28 @@ Cree interfaces para Media Player y Advanced Media Player.
 > MediaPlayer.php
 
 ```php
+<?php
 
+declare(strict_types=1);
+
+interface MediaPlayer
+{
+    public function play(string $audioType, string $fileName): void;
+}
 ```
 
 > AdvancedMediaPlayer.php
 
 ```php
+<?php
 
+declare(strict_types=1);
+
+interface AdvancedMediaPlayer
+{
+    public function playVlc(string $fileName): void;
+    public function playMp4(string $fileName): void;
+}
 ```
 
 ## Paso 2
@@ -41,13 +56,47 @@ Cree clases concretas implementando la interfaz AdvancedMediaPlayer.
 > VlcPlayer.php
 
 ```php
+<?php
 
+declare(strict_types=1);
+
+include_once __DIR__ . '/AdvancedMediaPlayer.php';
+
+class VlcPlayer implements AdvancedMediaPlayer
+{
+    public function playVlc(string $fileName): void
+    {
+        print sprintf("Playing vlc file. Name: %s " . PHP_EOL, $fileName);
+    }
+
+    public function playMp4(string $fileName): void
+    {
+        //do nothing
+    }
+}
 ```
 
 > Mp4Player.php
 
 ```php
+<?php
 
+declare(strict_types=1);
+
+include_once __DIR__ . '/AdvancedMediaPlayer.php';
+
+class Mp4Player implements AdvancedMediaPlayer
+{
+    public function playVlc(string $fileName): void
+    {
+        //do nothing
+    }
+
+    public function playMp4(string $fileName): void
+    {
+        print sprintf("Playing mp4 file. Name: %s" . PHP_EOL, $fileName);
+    }
+}
 ```
 
 ## Paso 3
@@ -57,7 +106,36 @@ Cree una clase de adaptador implementando la interfaz MediaPlayer.
 > MediaAdapter.php
 
 ```php
+<?php
 
+declare(strict_types=1);
+
+include_once __DIR__ . '/MediaPlayer.php';
+include_once __DIR__ . '/VlcPlayer.php';
+include_once __DIR__ . '/Mp4Player.php';
+
+class MediaAdapter implements MediaPlayer
+{
+    private $advancedMusicPlayer;
+
+    public function __construct(string $audioType)
+    {
+        if (strcasecmp($audioType, "vlc")) {
+            $this->advancedMusicPlayer = new VlcPlayer();
+        } else if (strcasecmp($audioType, "mp4")) {
+            $this->advancedMusicPlayer = new Mp4Player();
+        }
+    }
+
+    public function play(string $audioType, string $filename): void
+    {
+        if (strcasecmp($audioType, "vlc")) {
+            $this->advancedMusicPlayer->playVlc($filename);
+        } else if (strcasecmp($audioType, "mp4")) {
+            $this->advancedMusicPlayer->playMp4($filename);
+        }
+    }
+}
 ```
 
 ## Paso 4
@@ -67,7 +145,32 @@ Cree una clase concreta implementando la interfaz MediaPlayer.
 > AudioPlayer.php
 
 ```php
+<?php
 
+declare(strict_types=1);
+
+include_once __DIR__ . '/MediaPlayer.php';
+include_once __DIR__ . '/MediaAdapter.php';
+
+class AudioPlayer implements MediaPlayer
+{
+    private $mediaAdapter;
+
+    public function play(string $audioType, string $filename): void
+    {
+        //inbuilt support to play mp3 music files
+        if (strcasecmp($audioType, "mp3") == 0) {
+            print sprintf("Playing mp3 file. Name: %s: " . PHP_EOL, $filename);
+        }
+        //mediaAdapter is providing support to play other file formats
+        else if (strcasecmp($audioType, "vlc") == 0 || strcasecmp($audioType, "mp4") == 0) {
+            $this->mediaAdapter = new MediaAdapter($audioType);
+            $this->mediaAdapter->play($audioType, $filename);
+        } else {
+            print sprintf("Invalid media. %s formate not supported" . PHP_EOL, $audioType);
+        }
+    }
+}
 ```
 
 ## Paso 5
@@ -77,7 +180,16 @@ Utilice AudioPlayer para reproducir diferentes tipos de formatos de audio.
 > AdapterPatternDemo.php
 
 ```php
+<?php
 
+include_once __DIR__ . '/AudioPlayer.php';
+
+$audioplayer = new AudioPlayer();
+
+$audioplayer->play("mp3", "beyond the horizon.mp3");
+$audioplayer->play("mp4", "alone.mp4");
+$audioplayer->play("vlc", "far far away.vlc");
+$audioplayer->play("avi", "mind me.avi");
 ```
 
 ## Paso 6

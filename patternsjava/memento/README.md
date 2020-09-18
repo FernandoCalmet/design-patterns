@@ -1,4 +1,4 @@
-# Mediator Pattern
+# Memento Pattern
 
 El patrón de recuerdo se utiliza para restaurar el estado de un objeto a un estado anterior. El patrón de recuerdo se incluye en la categoría de patrón de comportamiento.
 

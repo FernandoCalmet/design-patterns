@@ -27,9 +27,10 @@ class Meal
     public function showItems(): void
     {
         foreach ($this->items as $item) {
-            print sprintf("Item: ", $item->name(), PHP_EOL);
-            print sprintf(", Packing: ", $item->packing()->pack(), PHP_EOL);
-            print sprintf(", Price: ", $item->price(), PHP_EOL);
+            print sprintf("Item: ", $item->name() . PHP_EOL);
+            print sprintf(", Packing: ", $item->packing()->pack() . PHP_EOL);
+            print sprintf(", Price: ", $item->price() . PHP_EOL);
+            print sprintf(PHP_EOL);
         }
     }
 }

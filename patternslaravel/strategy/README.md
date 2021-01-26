@@ -272,7 +272,7 @@ Pruebe y verifique la salidas con la colección de Postman: [Importar Colección
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/collections/a3d0cc8506495fb5ab8b)  
   
 HTTP Method | URL | Param Key | Param Value
---- | --- | --- | --- | ---
+--- | --- | --- | ---
 GET | `/api/get-following-states` | state | in_transit
 GET | `/api/get-following-states` | state | cancelled
 GET | `/api/get-following-states` | state | billed

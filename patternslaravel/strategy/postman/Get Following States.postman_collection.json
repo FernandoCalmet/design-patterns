@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "a6c114cc-6369-47bc-aa17-61dde19b5e22",
+		"name": "Get Following States",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Following states",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get-following-states?state=in_transit",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get-following-states"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "in_transit"
+						},
+						{
+							"key": "state",
+							"value": "cancelled",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "billed",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "payed",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "certified",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "at_destination",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

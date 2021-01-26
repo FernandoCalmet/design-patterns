@@ -1,4 +1,4 @@
-# Strategy Pattern
+# Adapter Pattern
 
 El patrón de adaptador funciona como un puente entre dos interfaces incompatibles. Este tipo de patrón de diseño viene bajo patrón estructural ya que este patrón combina la capacidad de dos interfaces independientes.
 

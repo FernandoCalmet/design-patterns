@@ -28,6 +28,22 @@ php artisan make:controller PurchaseOrderController
 
 ## Paso 3
 
+Agregar el controlador a la ruta de la api.
+
+> routes/api.php
+
+```php
+<?php
+
+use App\Http\Controllers\PurchaseOrderController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
+Route::get('get-following-states', [PurchaseOrderController::class, 'getFollowingStates']);
+```
+
+## Paso 4
+
 Aplicamos el patron strategy cuando una clase define muchos comportamientos y estas se representan con multiples condicionales, esto dara mayor dificultad en ir agregando mas estados como lo podemos apreciar en la siguiente clase.
 
 > app/Http/Controllers/PurchaseOrderController.php
@@ -70,7 +86,7 @@ class PurchaseOrderController extends Controller
 }
 ```
 
-## Paso 4
+## Paso 5
 
 Ahora definimos una interfaz para definir un contrato para poder ejecutar los cambios de estados posibles.
 
@@ -87,7 +103,7 @@ interface PurchaseOrderStatesInterface
 }
 ```
 
-## Paso 5
+## Paso 6
 
 Crear una carpeta **PurchaseOrderStates**  para agrupar una clase concreta para cada estado.
 
@@ -201,7 +217,7 @@ class Cancelled implements PurchaseOrderStatesInterface
 }
 ```
 
-## Paso 6
+## Paso 7
 
 Crear la clase Contexto para poder llamar a cada estado. Para ello creamos la carpeta **Values**
 
@@ -232,7 +248,7 @@ final class PurchaseOrderStatusValues
 }
 ```
 
-## Paso 7
+## Paso 8
 
 Actualizar el controlador, importar el contexto y ahora podemos usar la interface para manejar los estados.
 
@@ -259,7 +275,7 @@ class PurchaseOrderController extends Controller
 }
 ```
 
-## Paso 8
+## Paso 9
 
 Ejecutar en localhost:8080
 

@@ -8,26 +8,26 @@ Los patrones más universales y de alto nivel son los patrones arquitectónicos.
 
 ## Patrones Creacionales
 
-- [Factory](/factory/README.md)
-- [Builder](/builder/README.md)
-- [Singleton](/singleton/README.md)
+- [Factory](./factory/README.md)
+- [Builder](./builder/README.md)
+- [Singleton](./singleton/README.md)
 
 ## Patrones Estructurales
 
-- [Adapter](/adapter/README.md)
-- [Decorator](/decorator/README.md)
-- [MVC](/mvc/README.md)
-- [Repository](repository/README.md)
+- [Adapter](./adapter/README.md)
+- [Decorator](./decorator/README.md)
+- [MVC](./mvc/README.md)
+- [Repository](./repository/README.md)
 
 ## Patrones de Comportamiento
 
-- [Observer](/observer/README.md)
-- [Strategy](/strategy/README.md)
+- [Observer](./observer/README.md)
+- [Strategy](./strategy/README.md)
 
 ## Patrones de J2EE
 
-- [Data Access Object](/data_access_object/README.md)
-- [Data Transfer Object](/transfer_object/README.md)
+- [Data Access Object](./data_access_object/README.md)
+- [Data Transfer Object](./transfer_object/README.md)
 
 ---
 :octocat: [Mi Github](https://github.com/FernandoCalmet)

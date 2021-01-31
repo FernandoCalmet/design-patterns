@@ -12,13 +12,13 @@ Los patrones más universales y de alto nivel son los patrones arquitectónicos.
 
 ## Patrones Estructurales
 
-- [Adapter](/adapter/README.md)
-- [Decorator](/decorator/README.md)
-- [Repository](repository/README.md)
+- [Adapter](./adapter/README.md)
+- [Decorator](./decorator/README.md)
+- [Repository](./repository/README.md)
 
 ## Patrones de Comportamiento
 
-- [Strategy](/strategy/README.md)
+- [Strategy](./strategy/README.md)
 
 ## Patrones de J2EE
 

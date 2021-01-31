@@ -1,5 +1,11 @@
 # PATRONES DE DISEÑO
 
+## Contenido
+
+- :green_book: [Patrones de Diseño con Java](/patternsjava/README.md)
+- :green_book: [Patrones de Diseño con PHP](/patternsphp/README.md)
+- :green_book: [Patrones de Diseño en Laravel](/patternslaravel/README.md)
+
 Los patrones de diseño representan las mejores prácticas utilizadas por los desarrolladores de software orientados a objetos con experiencia. Los patrones de diseño son soluciones a los problemas generales que enfrentan los desarrolladores de software durante el desarrollo de software. Numerosos desarrolladores de software obtuvieron estas soluciones mediante prueba y error durante un período de tiempo considerable.
 
 ## Audiencia
@@ -45,6 +51,6 @@ S.N. | Patrón y descripción
 4 | **Patrones J2EE** Estos patrones de diseño se refieren específicamente al nivel de presentación. Sun Java Center identifica estos patrones.
 
 ---
-:octocat: [Check more about me.](https://github.com/FernandoCalmet)
+:octocat: [Mi Github](https://github.com/FernandoCalmet)
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T41JKMI)

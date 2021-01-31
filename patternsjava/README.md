@@ -6,8 +6,6 @@ Los patrones más básicos y de bajo nivel a menudo se denominan modismos. Por l
 
 Los patrones más universales y de alto nivel son los patrones arquitectónicos. Los desarrolladores pueden implementar estos patrones en prácticamente cualquier idioma. A diferencia de otros patrones, se pueden utilizar para diseñar la arquitectura de una aplicación completa.
 
-Además, todos los patrones se pueden clasificar según su intención o propósito. Este libro cubre tres grupos principales de patrones:
-
 ## Patrones Creacionales
 
 - [Abstract Factory](/abstract_factory/README.md)

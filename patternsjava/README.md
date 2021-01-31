@@ -42,7 +42,7 @@ Además, todos los patrones se pueden clasificar según su intención o propósi
 - [Template Method](/template/README.md)
 - [Visitor](/visitor/README.md)
 - [Interpreter](/interpreter/README.md)
-- [Null Object](/null_object/README.md))
+- [Null Object](/null_object/README.md)
 
 ## Patrones de J2EE
 

@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-include_once __DIR__ . '/Circle.php';
-include_once __DIR__ . '/Rectangle.php';
-include_once __DIR__ . '/Square.php';
+namespace App;
 
 class ShapeFactory
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '/Shape.php';
+namespace App;
 
 class Square implements Shape
 {

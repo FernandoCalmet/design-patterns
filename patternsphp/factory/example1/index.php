@@ -1,6 +1,8 @@
 <?php
 
-include_once __DIR__ . '/ShapeFactory.php';
+use App\ShapeFactory;
+
+require 'vendor/autoload.php';
 
 $shapeFactory = new ShapeFactory();
 

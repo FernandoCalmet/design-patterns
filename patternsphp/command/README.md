@@ -9,8 +9,8 @@ El patrón de comando es un patrón de diseño basado en datos y se incluye en l
 
 ## Ejemplos
 
-- [Example 1](./example1/README.md)
-- [Example 2](./example2/README.md)
+- [Example 1](./example1)
+- [Example 2](./example2)
 
 ## Comandos
 

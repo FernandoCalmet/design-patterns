@@ -23,6 +23,7 @@ Los patrones más universales y de alto nivel son los patrones arquitectónicos.
 
 - [Observer](./observer/README.md)
 - [Strategy](./strategy/README.md)
+- [Command](./command/README.md)
 
 ## Patrones de J2EE
 

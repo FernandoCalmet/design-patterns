@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace App;
+
 class StudentVO
 {
     private $_name;

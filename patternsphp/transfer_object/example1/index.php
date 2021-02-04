@@ -1,6 +1,8 @@
 <?php
 
-require_once __DIR__ . '/StudentBO.php';
+use App\StudentBO;
+
+require 'vendor/autoload.php';
 
 $studentBusinessObject = new StudentBO();
 

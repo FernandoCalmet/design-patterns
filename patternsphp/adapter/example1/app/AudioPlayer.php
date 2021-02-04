@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-include_once __DIR__ . '/MediaPlayer.php';
-include_once __DIR__ . '/MediaAdapter.php';
+namespace App;
 
 class AudioPlayer implements MediaPlayer
 {

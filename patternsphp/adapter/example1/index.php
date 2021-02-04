@@ -1,6 +1,8 @@
 <?php
 
-include_once __DIR__ . '/AudioPlayer.php';
+use App\AudioPlayer;
+
+require 'vendor/autoload.php';
 
 $audioplayer = new AudioPlayer();
 

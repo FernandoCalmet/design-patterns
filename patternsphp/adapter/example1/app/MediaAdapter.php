@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-include_once __DIR__ . '/MediaPlayer.php';
-include_once __DIR__ . '/VlcPlayer.php';
-include_once __DIR__ . '/Mp4Player.php';
+namespace App;
 
 class MediaAdapter implements MediaPlayer
 {

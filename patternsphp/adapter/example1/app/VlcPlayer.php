@@ -2,17 +2,19 @@
 
 declare(strict_types=1);
 
+namespace App;
+
 include_once __DIR__ . '/AdvancedMediaPlayer.php';
 
-class Mp4Player implements AdvancedMediaPlayer
+class VlcPlayer implements AdvancedMediaPlayer
 {
     public function playVlc(string $fileName): void
     {
-        //do nothing
+        print sprintf("Playing vlc file. Name: %s " . PHP_EOL, $fileName);
     }
 
     public function playMp4(string $fileName): void
     {
-        print sprintf("Playing mp4 file. Name: %s" . PHP_EOL, $fileName);
+        //do nothing
     }
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-include_once __DIR__ . '/Shape.php';
+namespace App;
 
 abstract class ShapeDecorator implements Shape
 {

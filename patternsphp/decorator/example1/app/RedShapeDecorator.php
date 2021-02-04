@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-include_once __DIR__ . '/Shape.php';
-include_once __DIR__ . '/ShapeDecorator.php';
+namespace App;
 
 class RedShapeDecorator extends ShapeDecorator
 {

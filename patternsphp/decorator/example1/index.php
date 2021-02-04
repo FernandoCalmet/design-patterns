@@ -1,8 +1,8 @@
 <?php
 
-include_once __DIR__ . '/Circle.php';
-include_once __DIR__ . '/Rectangle.php';
-include_once __DIR__ . '/RedShapeDecorator.php';
+use App\{Circle, Rectangle, RedShapeDecorator};
+
+require 'vendor/autoload.php';
 
 $circle = new Circle();
 $redCircle = new RedShapeDecorator($circle);

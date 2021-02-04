@@ -1,9 +1,8 @@
 <?php
 
-include_once __DIR__ . '/Subject.php';
-include_once __DIR__ . '/HexaObserver.php';
-include_once __DIR__ . '/OctalObserver.php';
-include_once __DIR__ . '/BinaryObserver.php';
+use App\{Subject, HexaObserver, OctalObserver, BinaryObserver};
+
+require 'vendor/autoload.php';
 
 $subject = new Subject();
 

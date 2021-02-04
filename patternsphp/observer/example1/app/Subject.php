@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-include_once __DIR__ . '/Observer.php';
+namespace App;
 
 class Subject
 {

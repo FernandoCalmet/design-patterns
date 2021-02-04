@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-include_once __DIR__ . '/Observer.php';
-include_once __DIR__ . '/Subject.php';
+namespace App;
 
 class OctalObserver extends Observer
 {

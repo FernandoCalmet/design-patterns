@@ -1,6 +1,8 @@
 <?php
 
-include_once __DIR__ . '/SingleObject.php';
+use App\SingleObject;
+
+require 'vendor/autoload.php';
 
 //illegal construct
 //Compile Time Error: The constructor SingleObject() is not visible

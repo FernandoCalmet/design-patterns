@@ -1,7 +1,8 @@
 <?php
 
-include_once __DIR__ . '/MealBuilder.php';
-include_once __DIR__ . '/Meal.php';
+use App\MealBuilder;
+
+require 'vendor/autoload.php';
 
 $mealBuilder = new MealBuilder();
 

@@ -2,11 +2,7 @@
 
 declare(strict_types=1);
 
-include_once __DIR__ . '/Meal.php';
-include_once __DIR__ . '/VegBurger.php';
-include_once __DIR__ . '/ChickenBurger.php';
-include_once __DIR__ . '/Coke.php';
-include_once __DIR__ . '/Pepsi.php';
+namespace App;
 
 class MealBuilder
 {

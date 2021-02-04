@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-include_once __DIR__ . '/Burger.php';
+namespace App;
 
 class ChickenBurger extends Burger
 {

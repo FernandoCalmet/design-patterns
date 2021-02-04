@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-include_once __DIR__ . '/ColdDrink.php';
+namespace App;
 
-class Coke extends ColdDrink
+class VegBurger extends Burger
 {
     public function price(): float
     {
-        return 30.0;
+        return 25.0;
     }
 
     public function name(): string
     {
-        return "Coke";
+        return "Veg Burger";
     }
 }

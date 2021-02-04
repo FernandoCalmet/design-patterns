@@ -1,0 +1,8 @@
+{
+    "name": "builder-pattern/php",
+    "autoload": {
+        "psr-4": {
+        "App\\": "app/"
+        }
+    }
+}

@@ -2,10 +2,16 @@
 
 declare(strict_types=1);
 
+namespace App;
+
 class Student
 {
     private $_rollNo;
     private $_name;
+
+    public function __construct()
+    {        
+    }
 
     public function getRollNo(): string
     {

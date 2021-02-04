@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace App;
+
 class StudentView
 {
     public function printStudentDetails(string $studentName, string $studentRollNo): void

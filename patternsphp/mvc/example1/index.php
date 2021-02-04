@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '/Student.php';
-require_once __DIR__ . '/StudentView.php';
-require_once __DIR__ . '/StudentController.php';
+use App\{Student, StudentView, StudentController};
+
+require 'vendor/autoload.php';
 
 class MVCPatternDemo
 {

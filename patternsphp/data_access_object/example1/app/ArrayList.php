@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace App;
+
 class ArrayList
 {
     public $list = array();
@@ -46,5 +48,5 @@ class ArrayList
         } else {
             return $arrKeys[0];
         }
-    }  
+    }
 }

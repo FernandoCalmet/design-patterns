@@ -1,8 +1,8 @@
 <?php
 
-require_once __DIR__ . '/StudentDao.php';
-require_once __DIR__ . '/StudentDaoImpl.php';
-require_once __DIR__ . '/StudentDao.php';
+use App\StudentDaoImpl;
+
+require 'vendor/autoload.php';
 
 $studentDao = new StudentDaoImpl();
 

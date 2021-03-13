@@ -1,4 +1,4 @@
-# PATRONES DE DISEÑO
+# PATRONES DE DISEÑO DE SOFTWARE
 
 ## Contenido
 
@@ -51,6 +51,7 @@ S.N. | Patrón y descripción
 4 | **Patrones J2EE** Estos patrones de diseño se refieren específicamente al nivel de presentación. Sun Java Center identifica estos patrones.
 
 ---
+
 :octocat: [Mi Github](https://github.com/FernandoCalmet)
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T41JKMI)

@@ -1,4 +1,4 @@
-# Patrones de Diseño con PHP
+# Patrones de Diseño de Software con PHP
 
 Los patrones de diseño se diferencian por su complejidad, nivel de detalle y escala de aplicabilidad a todo el sistema que se está diseñando. Me gusta la analogía con la construcción de carreteras: puede hacer que una intersección sea más segura instalando algunos semáforos o construyendo un intercambio completo de varios niveles con pasajes subterráneos para peatones.
 

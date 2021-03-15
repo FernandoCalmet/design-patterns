@@ -3,7 +3,9 @@
 ## Contenido
 
 - :green_book: [Patrones de Diseño con Java](/patternsjava/README.md)
+
 - :green_book: [Patrones de Diseño con PHP](/patternsphp/README.md)
+
 - :green_book: [Patrones de Diseño en Laravel](/patternslaravel/README.md)
 
 Los patrones de diseño representan las mejores prácticas utilizadas por los desarrolladores de software orientados a objetos con experiencia. Los patrones de diseño son soluciones a los problemas generales que enfrentan los desarrolladores de software durante el desarrollo de software. Numerosos desarrolladores de software obtuvieron estas soluciones mediante prueba y error durante un período de tiempo considerable.

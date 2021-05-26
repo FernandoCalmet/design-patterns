@@ -15,7 +15,9 @@ php index.php
 ## Resultado esperado
 
 ```bash
-
+Entrega de billetes de $500: 2
+Entrega de billetes de $200: 1
+Entrega de billetes de $100: 1
 ```
 
 ---

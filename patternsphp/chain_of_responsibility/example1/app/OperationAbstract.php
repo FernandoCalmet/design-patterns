@@ -13,7 +13,9 @@ abstract class OperationAbstract
 
     public function next(Transaction $transaction)
     {
-        $this->operation->process($transaction);
+        if ($this->operation) {
+            $this->operation->process($transaction);
+        }
     }
 
     abstract public function process(Transaction $transaction);

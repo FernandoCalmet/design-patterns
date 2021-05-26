@@ -1,0 +1,8 @@
+{
+    "name": "chainofresponsability-pattern/php",
+    "autoload": {
+      "psr-4": {
+        "App\\": "app/"
+      }
+    }
+  }

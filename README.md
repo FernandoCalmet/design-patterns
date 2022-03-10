@@ -1,10 +1,16 @@
 # PATRONES DE DISEÑO DE SOFTWARE
 
+[![Github][github-shield]][github-url]
+[![Kofi][kofi-shield]][kofi-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Khanakat][khanakat-shield]][khanakat-url]
+
 ## Contenido
 
-- :green_book: [Patrones de Diseño con Java](/patternsjava/README.md)
-- :green_book: [Patrones de Diseño con PHP](/patternsphp/README.md)
-- :green_book: [Patrones de Diseño en Laravel](/patternslaravel/README.md)
+- :green_book: [Patrones de Diseño con Java](/patterns_java/README.md)
+- :green_book: [Patrones de Diseño con CSharp](/patterns_csharp/README.md)
+- :green_book: [Patrones de Diseño con PHP](/patterns_php/README.md)
+- :green_book: [Patrones de Diseño en Laravel](/patterns_laravel/README.md)
 
 Los patrones de diseño representan las mejores prácticas utilizadas por los desarrolladores de software orientados a objetos con experiencia. Los patrones de diseño son soluciones a los problemas generales que enfrentan los desarrolladores de software durante el desarrollo de software. Numerosos desarrolladores de software obtuvieron estas soluciones mediante prueba y error durante un período de tiempo considerable.
 
@@ -50,8 +56,12 @@ S.N. | Patrón y descripción
 3 | **Patrones de comportamiento** Estos patrones de diseño se refieren específicamente a la comunicación entre objetos.
 4 | **Patrones J2EE** Estos patrones de diseño se refieren específicamente al nivel de presentación. Sun Java Center identifica estos patrones.
 
----
-
-:octocat: [Mi Github](https://github.com/FernandoCalmet)
-
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T41JKMI)
+<!--- reference style links --->
+[github-shield]: https://img.shields.io/badge/-@fernandocalmet-%23181717?style=flat-square&logo=github
+[github-url]: https://github.com/fernandocalmet
+[kofi-shield]: https://img.shields.io/badge/-@fernandocalmet-%231DA1F2?style=flat-square&logo=kofi&logoColor=ff5f5f
+[kofi-url]: https://ko-fi.com/fernandocalmet
+[linkedin-shield]: https://img.shields.io/badge/-fernandocalmet-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/fernandocalmet
+[linkedin-url]: https://www.linkedin.com/in/fernandocalmet
+[khanakat-shield]: https://img.shields.io/badge/khanakat.com-brightgreen?style=flat-square
+[khanakat-url]: https://khanakat.com

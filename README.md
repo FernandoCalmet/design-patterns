@@ -145,6 +145,9 @@ Patrón de diseño | Descripción
 
 > Fuente: Refactoring.Guru
 
+---
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T41JKMI)
+
 <!--- reference style links --->
 [github-shield]: https://img.shields.io/badge/-@fernandocalmet-%23181717?style=flat-square&logo=github
 [github-url]: https://github.com/fernandocalmet

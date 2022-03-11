@@ -7,21 +7,27 @@
 
 ## Patrones Creacionales
 
-- [Factory](./factory/README.md)
-- [Builder](./builder/README.md)
-- [Singleton](./singleton/README.md)
+- [Factory Method](./factory_method)
+- [Abstract Factory](./abstract_factory)
+- [Builder](./builder)
+- [Composite](./composite)
+- [Singleton](./singleton)
+- [Prototype](./prototype)
 
 ## Patrones Estructurales
 
-- [Adapter](./adapter/README.md)
-- [Decorator](./decorator/README.md)
-- [Facade](./facade/README.md)
+- [Adapter](./adapter)
+- [Bridge](./bridge)
+- [Decorator](./decorator)
+- [Facade](./facade)
+- [Flyweight](./flyweight)
+- [Proxy](./proxy)
 
 ## Patrones de Comportamiento
 
-- [Observer](./observer/README.md)
-- [State](./state/README.md)
-- [Strategy](./strategy/README.md)
+- [Observer](./observer)
+- [State](./state)
+- [Strategy](./strategy)
 
 <!--- reference style links --->
 [github-shield]: https://img.shields.io/badge/-@fernandocalmet-%23181717?style=flat-square&logo=github

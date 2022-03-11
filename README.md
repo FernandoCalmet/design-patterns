@@ -15,11 +15,11 @@
 ## 📓 TABLA DE CONTENIDO
 
 - [¿En qué consiste el patrón?](#en-qué-consiste-el-patrón)
-- Historia de los patrones
-- ¿Por qué debería aprender sobre patrones?
-- Crítica de los patrones
-- Clasificación de los patrones
-- El catálogo de patrones de diseño
+- [Historia de los patrones](#historia-de-los-patrones)
+- [¿Por qué debería aprender sobre patrones?](#por-qué-debería-aprender-sobre-patrones)
+- [Crítica de los patrones](#crítica-de-los-patrones)
+- [Clasificación de los patrones](#clasificación-de-los-patrones)
+- [El catálogo de patrones de diseño](#el-catálogo-de-patrones-de-diseño)
 
 # INTRODUCCIÓN
 

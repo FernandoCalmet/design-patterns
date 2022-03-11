@@ -5,16 +5,25 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Khanakat][khanakat-shield]][khanakat-url]
 
-## Contenido en este repositorio
+## 💻 CONTENIDO DE EJEMPLOS EN CÓDIGO
 
 - :green_book: [Patrones de Diseño con Java](/patterns_java/README.md)
 - :green_book: [Patrones de Diseño con CSharp](/patterns_csharp/README.md)
 - :green_book: [Patrones de Diseño con PHP](/patterns_php/README.md)
 - :green_book: [Patrones de Diseño en Laravel](/patterns_laravel/README.md)
 
-# Introducción
+## 📓 TABLA DE CONTENIDO
 
-## ¿Qué es un patrón de diseño?
+- [¿En qué consiste el patrón?](#en-qué-consiste-el-patrón)
+- Historia de los patrones
+- ¿Por qué debería aprender sobre patrones?
+- Crítica de los patrones
+- Clasificación de los patrones
+- El catálogo de patrones de diseño
+
+# INTRODUCCIÓN
+
+## ¿QUÉ ES UN PATRÓN DE DISEÑO?
 
 Los patrones de diseño son soluciones habituales a problemas que ocurren con frecuencia en el diseño de software. Son como planos prefabricados que se pueden personalizar para resolver un problema de diseño recurrente en tu código.
 
@@ -24,7 +33,7 @@ A menudo los patrones se confunden con algoritmos porque ambos conceptos describ
 
 Una analogía de un algoritmo sería una receta de cocina: ambos cuentan con pasos claros para alcanzar una meta. Por su parte, un patrón es más similar a un plano, ya que puedes observar cómo son su resultado y sus funciones, pero el orden exacto de la implementación depende de ti.
 
-### ¿En qué consiste el patrón?
+### ¿EN QUÉ CONSISTE EL PATRÓN?
 
 La mayoría de los patrones se describe con mucha formalidad para que la gente pueda reproducirlos en muchos contextos. Aquí tienes las secciones que suelen estar presentes en la descripción de un patrón:
 
@@ -35,7 +44,7 @@ La mayoría de los patrones se describe con mucha formalidad para que la gente p
   
 Algunos catálogos de patrones enumeran otros detalles útiles, como la aplicabilidad del patrón, los pasos de implementación y las relaciones con otros patrones.
 
-### Historia de los patrones
+## HISTORIA DE LOS PATRONES
 
 ¿Quién inventó los patrones de diseño? Esa es una buena, aunque imprecisa pregunta. Los patrones de diseño no son conceptos opacos y sofisticados, al contrario. Los patrones son soluciones habituales a problemas comunes en el diseño orientado a objetos. Cuando una solución se repite una y otra vez en varios proyectos, al final alguien le pone un nombre y explica la solución en detalle. Básicamente, así es como se descubre un patrón.
 
@@ -45,7 +54,7 @@ La idea fue recogida por cuatro autores: Erich Gamma, John Vlissides, Ralph John
 
 Desde entonces se han descubierto decenas de nuevos patrones orientados a objetos. La “metodología del patrón” se hizo muy popular en otros campos de la programación, por lo que hoy en día existen muchos otros patrones no relacionados con el diseño orientado a objetos.
 
-### ¿Por qué debería aprender sobre patrones?
+## ¿POR QUÉ DEBERÍA APRENDER SOBRE PATRONES?
 
 La realidad es que podrías trabajar durante años como programador sin conocer un solo patrón. Mucha gente lo hace. Incluso en ese caso, podrías estar implementando patrones sin saberlo. Así que, ¿por qué dedicar tiempo a aprenderlos?
 
@@ -53,7 +62,7 @@ Los patrones de diseño son un juego de herramientas de soluciones comprobadas a
 
 Los patrones de diseño definen un lenguaje común que puedes utilizar con tus compañeros de equipo para comunicaros de forma más eficiente. Podrías decir: “Oh, utiliza un singleton para eso”, y todos entenderían la idea de tu sugerencia. No habría necesidad de explicar qué es un singleton si conocen el patrón y su nombre.
 
-### Crítica de los patrones
+## CRÍTICA DE LOS PATRONES
 
 a la sensación de que todos los holgazanes han criticado ya los patrones de diseño. Veamos los argumentos más habituales contra el uso de los patrones.
 
@@ -73,7 +82,7 @@ Los patrones intentan sistematizar soluciones cuyo uso ya es generalizado. Esta 
 
 Este es el problema que persigue a muchos principiantes que acaban de familiarizarse con los patrones. Una vez que aprenden sobre patrones, intentan aplicarlos en todas partes, incluso en situaciones en las que un código más simple funcionaría perfectamente bien.
 
-### Clasificación de los patrones
+## CLASIFICACIÓN DE LOS PATRONES
 
 Los patrones de diseño varían en su complejidad, nivel de detalle y escala de aplicabilidad al sistema completo que se diseña. Me gusta la analogía de la construcción de carreteras: puedes hacer más segura una intersección instalando semáforos o construyendo un intercambiador completo de varios niveles con pasajes subterráneos para peatones.
 
@@ -89,9 +98,9 @@ Los **patrones estructurales** explican cómo ensamblar objetos y clases en estr
 
 Los **patrones de comportamiento** se encargan de una comunicación efectiva y la asignación de responsabilidades entre objetos.
 
-## El catálogo de patrones de diseño
+# EL CATÁLOGO DE PATRONES DE DISEÑO
 
-### Patrones creacionales
+## PATRONES CREACIONALES
 
 Estos patrones proporcionan mecanismos de creación de objetos que incrementan la flexibilidad y la reutilización del código existente.
 
@@ -99,7 +108,7 @@ Estos patrones proporcionan mecanismos de creación de objetos que incrementan l
 --- | --- | --- | ---
 ![img-abstract-factory](.github/img/abstract-factory-mini.png) | ![img-abstract-factory](.github/img/builder-mini.png) | ![img-factory-method](.github/img/factory-method-mini.png) | ![img-prototype](.github/img/prototype-mini.png) | ![img-singleton](.github/img/singleton-mini.png)
 
-### Patrones estructurales
+## PATRONES ESTRUCTURALES
 
 Estos patrones explican cómo ensamblar objetos y clases en estructuras más grandes, mientras se mantiene la flexibilidad y eficiencia de la estructura.
 
@@ -108,7 +117,7 @@ Estos patrones explican cómo ensamblar objetos y clases en estructuras más gra
 ![img-adapter](.github/img/singleton-mini.png) | ![img-bridge](.github/img/bridge-mini.png) | ![img-composite](.github/img/composite-mini.png) | ![img-decorator](.github/img/decorator-mini.png)
 ![img-facade](.github/img/facade-mini.png) | ![img-flyweight](.github/img/flyweight-mini.png) | ![img-proxy](.github/img/proxy-mini.png) | ` `
 
-### Patrones de comportamiento
+## PATRONES DE COMPORTAMIENTO
 
 Estos patrones tratan con algoritmos y la asignación de responsabilidades entre objetos.
 

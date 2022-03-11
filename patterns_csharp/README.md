@@ -10,7 +10,7 @@
 Imagen | Patrón | Puntuación | Descripción
 --- | --- | --- | ---
 ![img-abstract-factory](../.github/img/abstract-factory-mini.png) | [Abstract Factory](https://github.com/FernandoCalmet/Design-Patterns/wiki/abstract_factory) | ⭐⭐⭐ | Permite producir familias de objetos relacionados sin especificar sus clases concretas.
-![img-abstract-factory](../.github/img/builder-mini.png) | [Builder](https://github.com/FernandoCalmet/Design-Patterns/wiki/builder) | ⭐⭐⭐ | Permite construir objetos complejos paso a paso. Este patrón nos permite producir distintos tipos y representaciones de un objeto empleando el mismo código de construcción.
+![img-builder](../.github/img/builder-mini.png) | [Builder](https://github.com/FernandoCalmet/Design-Patterns/wiki/builder) | ⭐⭐⭐ | Permite construir objetos complejos paso a paso. Este patrón nos permite producir distintos tipos y representaciones de un objeto empleando el mismo código de construcción.
 ![img-factory-method](../.github/img/factory-method-mini.png) | [Factory Method](https://github.com/FernandoCalmet/Design-Patterns/wiki/factory_method) | ⭐⭐⭐ | Proporciona una interfaz para la creación de objetos en una superclase, mientras permite a las subclases alterar el tipo de objetos que se crearán.
 ![img-prototype](../.github/img/prototype-mini.png) | [Prototype](https://github.com/FernandoCalmet/Design-Patterns/wiki/prototype) | ⭐⭐ | Permite copiar objetos existentes sin que el código dependa de sus clases.
 ![img-singleton](../.github/img/singleton-mini.png) | [Singleton](https://github.com/FernandoCalmet/Design-Patterns/wiki/singleton) | ⭐⭐ | Permite asegurarnos de que una clase tenga una única instancia, a la vez que proporciona un punto de acceso global a dicha instancia.

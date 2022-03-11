@@ -28,6 +28,13 @@
 - [Observer](./observer)
 - [State](./state)
 - [Strategy](./strategy)
+- [Chain of Responsibility](./chain_of_responsibility)
+- [Command](./command)
+- [Iterator](./iterator)
+- [Mediator](./mediator)
+- [Memento](./memento)
+- [Template Method](./template_method)
+- [Visitor](./visitor)
 
 <!--- reference style links --->
 [github-shield]: https://img.shields.io/badge/-@fernandocalmet-%23181717?style=flat-square&logo=github

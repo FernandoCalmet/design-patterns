@@ -42,8 +42,6 @@ Imagen | Patrón | Puntuación | Descripción
 ![img-template-method](../.github/img/template-method-mini.png) | [Template Method](./template_method) | ⭐⭐ | Define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobrescriban pasos del algoritmo sin cambiar su estructura.
 ![img-visitor](../.github/img/visitor-mini.png) | [Visitor](https://github.com/FernandoCalmet/Design-Patterns/wiki/visitor) | ⭐⭐ | Permite separar algoritmos de los objetos sobre los que operan.
 
-> Fuente: Refactoring.Guru
-
 <!--- reference style links --->
 [github-shield]: https://img.shields.io/badge/-@fernandocalmet-%23181717?style=flat-square&logo=github
 [github-url]: https://github.com/fernandocalmet

@@ -125,6 +125,7 @@ Imagen | Patrón | Puntuación | Descripción
 ![img-facade](.github/img/facade-mini.png) | [Facade](https://github.com/FernandoCalmet/Design-Patterns/wiki/facade) | ⭐⭐ | Proporciona una interfaz simplificada a una biblioteca, un framework o cualquier otro grupo complejo de clases.
 ![img-flyweight](.github/img/flyweight-mini.png) | [Flyweight](https://github.com/FernandoCalmet/Design-Patterns/wiki/flyweight) | ⭐ | Permite mantener más objetos dentro de la cantidad disponible de memoria RAM compartiendo las partes comunes del estado entre varios objetos en lugar de mantener toda la información en cada objeto.
 ![img-proxy](.github/img/proxy-mini.png) | [Proxy](https://github.com/FernandoCalmet/Design-Patterns/wiki/proxy) | ⭐ | Permite proporcionar un sustituto o marcador de posición para otro objeto. Un proxy controla el acceso al objeto original, permitiéndote hacer algo antes o después de que la solicitud llegue al objeto original.
+` ` | [Repository](https://github.com/FernandoCalmet/Design-Patterns/wiki/repository) | ⭐⭐⭐ | En medio entre el dominio y las capas de mapeo de datos utilizando una interfaz similar a una colección para acceder a los objetos del dominio.
 
 ## PATRONES DE COMPORTAMIENTO
 
@@ -143,7 +144,7 @@ Imagen | Patrón | Puntuación | Descripción
 ![img-template-method](.github/img/template-method-mini.png) | [Template Method](https://github.com/FernandoCalmet/Design-Patterns/wiki/template_method) | ⭐⭐ | Define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobrescriban pasos del algoritmo sin cambiar su estructura.
 ![img-visitor](.github/img/visitor-mini.png) | [Visitor](https://github.com/FernandoCalmet/Design-Patterns/wiki/visitor) | ⭐⭐ | Permite separar algoritmos de los objetos sobre los que operan.
 
-> Fuente: Refactoring.Guru
+> Fuente: RefactoringGuru, MartinFowler
 
 ---
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T41JKMI)

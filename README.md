@@ -7,10 +7,10 @@
 
 ## 💻 CONTENIDO DE EJEMPLOS EN CÓDIGO
 
-- [Patrones de Diseño con Java](/java)
-- [Patrones de Diseño con CSharp](/csharp)
-- [Patrones de Diseño con PHP](/php)
-- [Patrones de Diseño en Laravel](/php_laravel)
+- [Patrones de Diseño con Java](/patterns_java)
+- [Patrones de Diseño con CSharp](/patterns_csharp)
+- [Patrones de Diseño con PHP](/patterns_php)
+- [Patrones de Diseño en Laravel](/patterns_php_laravel)
 
 ## 📓 TABLA DE CONTENIDO
 

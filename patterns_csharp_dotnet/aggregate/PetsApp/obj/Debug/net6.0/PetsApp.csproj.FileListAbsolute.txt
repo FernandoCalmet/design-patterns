@@ -1,0 +1,15 @@
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\bin\Debug\net6.0\PetsApp.exe
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\bin\Debug\net6.0\PetsApp.deps.json
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\bin\Debug\net6.0\PetsApp.runtimeconfig.json
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\bin\Debug\net6.0\PetsApp.dll
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\bin\Debug\net6.0\ref\PetsApp.dll
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\bin\Debug\net6.0\PetsApp.pdb
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\obj\Debug\net6.0\PetsApp.csproj.AssemblyReference.cache
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\obj\Debug\net6.0\PetsApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\obj\Debug\net6.0\PetsApp.AssemblyInfoInputs.cache
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\obj\Debug\net6.0\PetsApp.AssemblyInfo.cs
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\obj\Debug\net6.0\PetsApp.csproj.CoreCompileInputs.cache
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\obj\Debug\net6.0\PetsApp.dll
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\obj\Debug\net6.0\ref\PetsApp.dll
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\obj\Debug\net6.0\PetsApp.pdb
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\obj\Debug\net6.0\PetsApp.genruntimeconfig.cache

@@ -8,6 +8,8 @@ public class Pet
     public PetName Name { get; private set; }
     public PetDateOfBirth DateOfBirth { get; private set; }
 
+    public Pet() { }
+
     public Pet(PetName name, PetDateOfBirth date)
     {
         Name = name;

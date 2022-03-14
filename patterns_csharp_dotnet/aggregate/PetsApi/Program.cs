@@ -37,7 +37,7 @@ app.MapGet("/pets/{id}", (Guid id) =>
 app.MapPost("/pets", (Pet pet) =>
 {
     pets.Add(pet);
-    return Results.Ok(pet);
+    return Results.Ok(pets);
 })
 .WithName("CreatePet");
 

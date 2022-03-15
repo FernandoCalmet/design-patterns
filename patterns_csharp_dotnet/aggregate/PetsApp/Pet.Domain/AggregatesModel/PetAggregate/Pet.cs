@@ -23,10 +23,5 @@ public class Pet
     {
         DateOfBirth = date;
     }
-
-    public override string ToString()
-    {
-        return $"Id = {Id}, Name = {Name}, Birth = {DateOfBirth.Value}";
-    }
 }
 

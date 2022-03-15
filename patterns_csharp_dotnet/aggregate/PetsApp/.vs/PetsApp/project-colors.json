@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "94fc60be-fae9-4ca5-bab2-bf5477031ba5": {
+      "ProjectGuid": "94fc60be-fae9-4ca5-bab2-bf5477031ba5",
+      "DisplayName": "Pet.Domain",
+      "ColorIndex": 0
+    },
+    "baefbbe0-c4cb-4051-99bf-7f28347e4347": {
+      "ProjectGuid": "baefbbe0-c4cb-4051-99bf-7f28347e4347",
+      "DisplayName": "Pet",
+      "ColorIndex": 1
+    },
+    "2a7259f3-cf97-4885-88ae-6ade4909c6a8": {
+      "ProjectGuid": "2a7259f3-cf97-4885-88ae-6ade4909c6a8",
+      "DisplayName": "Pet.Domain",
+      "ColorIndex": 2
+    },
+    "cd0d1bb8-acdf-412f-9526-9ff236856e59": {
+      "ProjectGuid": "cd0d1bb8-acdf-412f-9526-9ff236856e59",
+      "DisplayName": "Pet.API",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

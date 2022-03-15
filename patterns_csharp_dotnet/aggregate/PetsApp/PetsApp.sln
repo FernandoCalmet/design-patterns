@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pet", "Pet", "{BAEFBBE0-C4CB-4051-99BF-7F28347E4347}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pet.API", "Pet.API\Pet.API.csproj", "{CD0D1BB8-ACDF-412F-9526-9FF236856E59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pet.API", "Pet.API\Pet.API.csproj", "{CD0D1BB8-ACDF-412F-9526-9FF236856E59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pet.Domain", "Pet.Domain\Pet.Domain.csproj", "{2A7259F3-CF97-4885-88AE-6ADE4909C6A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pet.Domain", "Pet.Domain\Pet.Domain.csproj", "{2A7259F3-CF97-4885-88AE-6ADE4909C6A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

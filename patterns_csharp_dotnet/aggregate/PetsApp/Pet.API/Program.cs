@@ -1,4 +1,4 @@
-using Pet.Domain.AggregatesModel.PetAggregate;
+using global::Pet.Domain.AggregatesModel.PetAggregate;
 
 var builder = WebApplication.CreateBuilder(args);
 

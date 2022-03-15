@@ -16,12 +16,12 @@ public class Pet
         DateOfBirth = date;
     }
 
-    public void SetPetName(PetName name)
+    public void SetName(PetName name)
     {
         Name = name;
     }
 
-    public void SetPetDateOfBirth(PetDateOfBirth date)
+    public void SetDateOfBirth(PetDateOfBirth date)
     {
         DateOfBirth = date;
     }

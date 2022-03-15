@@ -1,4 +1,5 @@
 using PetsApi.Domain.Entities;
+using PetsApi.Domain.ValueObjects;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +19,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-List<Pet> pets = new();
+var pets = new List<Pet>();
 
 app.MapGet("/pets", () =>
  {
@@ -26,9 +27,9 @@ app.MapGet("/pets", () =>
  })
 .WithName("GetAllPets");
 
-app.MapGet("/pets/{id}", (Guid id) =>
+app.MapGet("/pets/{id}", (Guid uid) =>
 {
-    return pets.Find(p => p.Id == id) is Pet pet ?
+    return pets.Find(p => p.Id == uid) is Pet pet ?
         Results.Ok(pet) :
         Results.NotFound("Sorry, pet not found.");
 })
@@ -36,30 +37,42 @@ app.MapGet("/pets/{id}", (Guid id) =>
 
 app.MapPost("/pets", (Pet pet) =>
 {
-    pets.Add(pet);
+    var petCheckDuplicateId = pets.Find(p => p.Id == pet.Id);
+    if (petCheckDuplicateId != null) return Results.NotFound("Sorry, pet ID is not available.");
+
+    var petToCreate = new Pet
+    {
+        Id = pet.Id
+    };
+    petToCreate.SetName(pet.Name);
+    petToCreate.SetDateOfBirth(pet.DateOfBirth);
+
+    pets.Add(petToCreate);
+
     return Results.Ok(pets);
 })
 .WithName("CreatePet");
 
-app.MapPut("/pets/{id}", (Guid id, Pet pet) =>
+app.MapPut("/pets/{id}", (Guid uid, Pet pet) =>
 {
-    var petToUpdate = pets.Find(p => p.Id == id);
+    var petToUpdate = pets.Find(p => p.Id == uid);
     if (petToUpdate == null) return Results.NotFound("Sorry, pet not found.");
 
-    petToUpdate.SetPetName(pet.Name);
-    petToUpdate.SetPetDateOfBirth(pet.DateOfBirth);
+    petToUpdate.SetName(pet.Name);
+    petToUpdate.SetDateOfBirth(pet.DateOfBirth);
 
     return Results.Ok(petToUpdate);
 })
 .WithName("EditPet");
 
-app.MapDelete("/pets/{id}", (Guid id) =>
+app.MapDelete("/pets/{id}", (Guid uid) =>
 {
-    var petToDelete = pets.Find(p => p.Id == id);
+    var petToDelete = pets.Find(p => p.Id == uid);
     if (petToDelete == null) return Results.NotFound("Sorry, pet not found.");
 
     pets.Remove(petToDelete);
-    return Results.Ok(petToDelete);
+
+    return Results.Ok(pets);
 })
 .WithName("RemovePet");
 

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "dc522dc7-a30f-4e08-a387-3ec228b2acf1": {
+      "ProjectGuid": "dc522dc7-a30f-4e08-a387-3ec228b2acf1",
+      "DisplayName": "PetsApi",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

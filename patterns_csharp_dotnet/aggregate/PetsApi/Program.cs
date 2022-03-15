@@ -49,7 +49,7 @@ app.MapPost("/pets", (Pet pet) =>
 
     pets.Add(petToCreate);
 
-    return Results.Ok(pets);
+    return Results.Created($"/pets/{petToCreate.Id}", petToCreate);
 })
 .WithName("CreatePet");
 

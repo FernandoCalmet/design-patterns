@@ -1,4 +1,4 @@
-﻿namespace Pet.Domain.AggregatesModel.PetAggregate.ValueObjects;
+﻿namespace Pet.Domain.AggregatesModel.PetAggregate;
 
 public record PetName
 {

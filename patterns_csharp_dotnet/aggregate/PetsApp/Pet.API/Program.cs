@@ -1,4 +1,4 @@
-using Pet.Domain.AggregatesModel.PetAggregate.Entities;
+using Pet.Domain.AggregatesModel.PetAggregate;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +18,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var pets = new List<Pet.Domain.AggregatesModel.PetAggregate.Entities.Pet>();
+var pets = new List<Pet.Domain.AggregatesModel.PetAggregate.Pet>();
 
 app.MapGet("/pets", () =>
 {
@@ -28,18 +28,18 @@ app.MapGet("/pets", () =>
 
 app.MapGet("/pets/{id}", (Guid uid) =>
 {
-    return pets.Find(p => p.Id == uid) is Pet.Domain.AggregatesModel.PetAggregate.Entities.Pet pet ?
+    return pets.Find(p => p.Id == uid) is Pet.Domain.AggregatesModel.PetAggregate.Pet pet ?
         Results.Ok(pet) :
         Results.NotFound("Sorry, pet not found.");
 })
 .WithName("GetPetById");
 
-app.MapPost("/pets", (Pet.Domain.AggregatesModel.PetAggregate.Entities.Pet pet) =>
+app.MapPost("/pets", (Pet.Domain.AggregatesModel.PetAggregate.Pet pet) =>
 {
     var petCheckDuplicateId = pets.Find(p => p.Id == pet.Id);
     if (petCheckDuplicateId != null) return Results.NotFound("Sorry, pet ID is not available.");
 
-    var petToCreate = new Pet.Domain.AggregatesModel.PetAggregate.Entities.Pet
+    var petToCreate = new Pet.Domain.AggregatesModel.PetAggregate.Pet
     {
         Id = pet.Id
     };
@@ -52,7 +52,7 @@ app.MapPost("/pets", (Pet.Domain.AggregatesModel.PetAggregate.Entities.Pet pet) 
 })
 .WithName("CreatePet");
 
-app.MapPut("/pets/{id}", (Guid uid, Pet.Domain.AggregatesModel.PetAggregate.Entities.Pet pet) =>
+app.MapPut("/pets/{id}", (Guid uid, Pet.Domain.AggregatesModel.PetAggregate.Pet pet) =>
 {
     var petToUpdate = pets.Find(p => p.Id == uid);
     if (petToUpdate == null) return Results.NotFound("Sorry, pet not found.");

@@ -1,6 +1,4 @@
-﻿using Pet.Domain.AggregatesModel.PetAggregate.ValueObjects;
-
-namespace Pet.Domain.AggregatesModel.PetAggregate.Entities;
+﻿namespace Pet.Domain.AggregatesModel.PetAggregate;
 
 public class Pet
 {

@@ -20,10 +20,16 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+#region -> Fields
+
 IMessageBroker _messageBroker = new MessageBrokerService();
-var petService = new PetService(_messageBroker);
+IPetService petService = new PetService(_messageBroker);
 var petViewModel = new PetViewModel();
 List<PetViewModel> petViewList = new();
+
+#endregion -> Fields
+
+#region -> Endpoints
 
 app.MapGet("/pets", () =>
 {
@@ -40,12 +46,13 @@ app.MapGet("/pets/{id}", (Guid uid) =>
     else
         return null;
 })
-.WithName("GetSinglePetById");
+.WithName("GetSinglePet");
 
 app.MapPost("/pets", (PetViewModel pet) =>
 {
     var petModel = petViewModel.MapPetModel(pet);
     petService.Create(petModel.Name, petModel.DateOfBirth);
+
     return Results.Created($"/pets/{pet.Id}", pet);
 })
 .WithName("CreatePet");
@@ -62,8 +69,11 @@ app.MapPut("/pets/{id}", (Guid uid, PetViewModel pet) =>
 app.MapDelete("/pets/{id}", (Guid uid) =>
 {
     petService?.Delete(uid);
+
     return Results.Ok();
 })
 .WithName("RemovePet");
+
+#endregion -> Endpoints
 
 app.Run();

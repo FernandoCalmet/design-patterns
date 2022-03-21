@@ -4,7 +4,7 @@ public record PetName
 {
     public string Value { get; init; }
 
-    internal PetName(string value)
+    public PetName(string value)
     {
         Validate(value);
         Value = value;

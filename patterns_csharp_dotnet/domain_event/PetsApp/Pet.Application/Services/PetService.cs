@@ -3,7 +3,7 @@ using Pets.Application.Models;
 
 namespace Pets.Application.Services;
 
-public class PetService
+public class PetService : IPetService
 {
     #region -> Fields
 

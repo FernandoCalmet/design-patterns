@@ -1,0 +1,51 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "94fc60be-fae9-4ca5-bab2-bf5477031ba5": {
+      "ProjectGuid": "94fc60be-fae9-4ca5-bab2-bf5477031ba5",
+      "DisplayName": "Pet.Domain",
+      "ColorIndex": 0
+    },
+    "baefbbe0-c4cb-4051-99bf-7f28347e4347": {
+      "ProjectGuid": "baefbbe0-c4cb-4051-99bf-7f28347e4347",
+      "DisplayName": "Pets",
+      "ColorIndex": 1
+    },
+    "2a7259f3-cf97-4885-88ae-6ade4909c6a8": {
+      "ProjectGuid": "2a7259f3-cf97-4885-88ae-6ade4909c6a8",
+      "DisplayName": "Pet.Domain",
+      "ColorIndex": 2
+    },
+    "cd0d1bb8-acdf-412f-9526-9ff236856e59": {
+      "ProjectGuid": "cd0d1bb8-acdf-412f-9526-9ff236856e59",
+      "DisplayName": "Pet.API",
+      "ColorIndex": 3
+    },
+    "c447684c-b80f-4f7c-8c81-a9be389161e1": {
+      "ProjectGuid": "c447684c-b80f-4f7c-8c81-a9be389161e1",
+      "DisplayName": "Pet.Infrastructure",
+      "ColorIndex": 4
+    },
+    "b8e45145-ff4c-482a-bf8f-182be036c2b0": {
+      "ProjectGuid": "b8e45145-ff4c-482a-bf8f-182be036c2b0",
+      "DisplayName": "Pet.Infrastructure",
+      "ColorIndex": 5
+    },
+    "5f67f29e-f357-49b2-bc1f-687b18fbb204": {
+      "ProjectGuid": "5f67f29e-f357-49b2-bc1f-687b18fbb204",
+      "DisplayName": "Pet.Application",
+      "ColorIndex": 6
+    },
+    "4e9a3779-455e-40be-8018-8e1dee35f8f5": {
+      "ProjectGuid": "4e9a3779-455e-40be-8018-8e1dee35f8f5",
+      "DisplayName": "Pet.Infrastructure",
+      "ColorIndex": 7
+    },
+    "06494ebd-86c8-471b-b09f-eb18e2380e81": {
+      "ProjectGuid": "06494ebd-86c8-471b-b09f-eb18e2380e81",
+      "DisplayName": "Pet.Infraestructure",
+      "ColorIndex": 8
+    }
+  },
+  "NextColorIndex": 9
+}

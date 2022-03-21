@@ -1,4 +1,4 @@
-using global::Pet.Domain.AggregatesModel.PetAggregate;
+using Pets.Domain.AggregatesModel.PetAggregate;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +18,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var pets = new List<Pet.Domain.AggregatesModel.PetAggregate.Pet>();
+var pets = new List<Pet>();
 
 app.MapGet("/pets", () =>
 {
@@ -28,37 +28,32 @@ app.MapGet("/pets", () =>
 
 app.MapGet("/pets/{id}", (Guid uid) =>
 {
-    return pets.Find(p => p.Id == uid) is Pet.Domain.AggregatesModel.PetAggregate.Pet pet ?
+    return pets.Find(p => p.Id == uid) is Pet pet ?
         Results.Ok(pet) :
         Results.NotFound("Sorry, pet not found.");
 })
-.WithName("GetPetById");
+.WithName("GetSinglePetById");
 
-app.MapPost("/pets", (Pet.Domain.AggregatesModel.PetAggregate.Pet pet) =>
+app.MapPost("/pets", (string name, DateTime date) =>
 {
-    var petCheckDuplicateId = pets.Find(p => p.Id == pet.Id);
-    if (petCheckDuplicateId != null) return Results.NotFound("Sorry, pet ID is not available.");
-
-    var petToCreate = new Pet.Domain.AggregatesModel.PetAggregate.Pet
-    {
-        Id = pet.Id
-    };
-    petToCreate.SetName(pet.Name);
-    petToCreate.SetDateOfBirth(pet.DateOfBirth);
-
+    var newPetGuid = Guid.NewGuid();
+    var newPetName = PetName.Create(name);
+    var newPetDateOfBirth = PetDateOfBirth.Create(date);
+    var petToCreate = new Pet(newPetGuid, newPetName, newPetDateOfBirth);
     pets.Add(petToCreate);
 
     return Results.Created($"/pets/{petToCreate.Id}", petToCreate);
 })
 .WithName("CreatePet");
 
-app.MapPut("/pets/{id}", (Guid uid, Pet.Domain.AggregatesModel.PetAggregate.Pet pet) =>
+app.MapPut("/pets/{id}", (Guid uid, string name, DateTime date) =>
 {
     var petToUpdate = pets.Find(p => p.Id == uid);
     if (petToUpdate == null) return Results.NotFound("Sorry, pet not found.");
-
-    petToUpdate.SetName(pet.Name);
-    petToUpdate.SetDateOfBirth(pet.DateOfBirth);
+    var newPetName = PetName.Create(name);
+    var newPetDateOfBirth = PetDateOfBirth.Create(date);
+    petToUpdate.SetName(newPetName);
+    petToUpdate.SetDateOfBirth(newPetDateOfBirth);
 
     return Results.Ok(petToUpdate);
 })
@@ -68,7 +63,6 @@ app.MapDelete("/pets/{id}", (Guid uid) =>
 {
     var petToDelete = pets.Find(p => p.Id == uid);
     if (petToDelete == null) return Results.NotFound("Sorry, pet not found.");
-
     pets.Remove(petToDelete);
 
     return Results.Ok(pets);

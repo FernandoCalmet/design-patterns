@@ -1,4 +1,4 @@
-﻿namespace Pet.Domain.AggregatesModel.PetAggregate;
+﻿namespace Pets.Domain.AggregatesModel.PetAggregate;
 
 public class Pet
 {
@@ -6,12 +6,13 @@ public class Pet
     public PetName Name { get; private set; }
     public PetDateOfBirth DateOfBirth { get; private set; }
 
-    public Pet() { }
+    private Pet() { }
 
-    public Pet(PetName name, PetDateOfBirth date)
+    public Pet(Guid id, PetName name, PetDateOfBirth date)
     {
-        Name = name;
-        DateOfBirth = date;
+        Id = id;
+        SetName(name);
+        SetDateOfBirth(date);
     }
 
     public void SetName(PetName name)

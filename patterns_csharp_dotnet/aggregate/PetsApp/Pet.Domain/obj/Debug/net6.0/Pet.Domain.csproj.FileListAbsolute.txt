@@ -9,4 +9,3 @@ D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsAp
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.Domain\obj\Debug\net6.0\Pet.Domain.dll
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.Domain\obj\Debug\net6.0\ref\Pet.Domain.dll
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.Domain\obj\Debug\net6.0\Pet.Domain.pdb
-D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.Domain\obj\Debug\net6.0\Pet.Domain.csproj.AssemblyReference.cache

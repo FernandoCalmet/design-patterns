@@ -8,7 +8,7 @@
     },
     "baefbbe0-c4cb-4051-99bf-7f28347e4347": {
       "ProjectGuid": "baefbbe0-c4cb-4051-99bf-7f28347e4347",
-      "DisplayName": "Pet",
+      "DisplayName": "Pets",
       "ColorIndex": 1
     },
     "2a7259f3-cf97-4885-88ae-6ade4909c6a8": {
@@ -20,7 +20,17 @@
       "ProjectGuid": "cd0d1bb8-acdf-412f-9526-9ff236856e59",
       "DisplayName": "Pet.API",
       "ColorIndex": 3
+    },
+    "c447684c-b80f-4f7c-8c81-a9be389161e1": {
+      "ProjectGuid": "c447684c-b80f-4f7c-8c81-a9be389161e1",
+      "DisplayName": "Pet.Infrastructure",
+      "ColorIndex": 4
+    },
+    "29de4e8d-51b8-4866-8d63-19f64a8965ea": {
+      "ProjectGuid": "29de4e8d-51b8-4866-8d63-19f64a8965ea",
+      "DisplayName": "Pet.Application",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 6
 }

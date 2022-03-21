@@ -1,23 +1,24 @@
-﻿namespace Pet.Domain.AggregatesModel.PetAggregate;
+﻿namespace Pets.Domain.AggregatesModel.PetAggregate;
 
 public record PetDateOfBirth
 {
-    public DateOnly Value { get; init; }
+    public DateTime Value { get; init; }
 
-    public PetDateOfBirth(DateOnly value)
+    public PetDateOfBirth(DateTime value)
     {
         Validate(value);
         Value = value;
     }
 
-    public static PetDateOfBirth Create(DateOnly value)
+    public static PetDateOfBirth Create(DateTime value)
     {
         return new PetDateOfBirth(value);
     }
 
-    private static void Validate(DateOnly value)
+    private static void Validate(DateTime value)
     {
-        if (value > DateOnly.FromDateTime(DateTime.Now))
+        //if (value > DateOnly.FromDateTime(DateTime.Now))
+        if (value > DateTime.Now)
         {
             throw new ArgumentOutOfRangeException("Date of birth is not valid.");
         }

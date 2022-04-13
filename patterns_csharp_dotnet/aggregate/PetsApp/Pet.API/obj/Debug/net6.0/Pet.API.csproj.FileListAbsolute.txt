@@ -11,7 +11,6 @@ D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsAp
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.API\bin\Debug\net6.0\Pet.API.deps.json
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.API\bin\Debug\net6.0\Pet.API.runtimeconfig.json
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.API\bin\Debug\net6.0\Pet.API.dll
-D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.API\bin\Debug\net6.0\ref\Pet.API.dll
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.API\bin\Debug\net6.0\Pet.API.pdb
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -27,3 +26,4 @@ D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsAp
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.API\obj\Debug\net6.0\ref\Pet.API.dll
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.API\obj\Debug\net6.0\Pet.API.pdb
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.API\obj\Debug\net6.0\Pet.API.genruntimeconfig.cache
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.API\obj\Debug\net6.0\refint\Pet.API.dll

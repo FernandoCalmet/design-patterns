@@ -4,22 +4,27 @@ public record PetName
 {
     public string Value { get; init; }
 
-    public PetName(string value)
+    internal PetName(string value)
     {
-        Validate(value);
         Value = value;
     }
 
     public static PetName Create(string value)
     {
+        Validate(value);
         return new PetName(value);
+    }
+
+    public static implicit operator string(PetName name)
+    {
+        return name.Value;
     }
 
     private static void Validate(string value)
     {
-        if (value.Length > 50)
+        if (value.Length > 20)
         {
-            throw new ArgumentOutOfRangeException("Name must not be more than 50 characters.");
+            throw new ArgumentOutOfRangeException(nameof(value), "Name must not be longer than 20 characters");
         }
     }
 }

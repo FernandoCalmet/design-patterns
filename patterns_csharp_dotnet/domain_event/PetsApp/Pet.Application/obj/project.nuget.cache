@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lcyyRPDNxYN57QMDdjBLzLFb3J6YdP9NoeY1Bb7waX0JRKUSTL7NgRkoEtd2h+juUyoerZIagcpHTz+fcUgYUw==",
+  "dgSpecHash": "96OCq8/FvPSimPBm5VDDKfSOWVuVpK5pRPOXVpI7h+ZN+zSqKpQGAnblr3N/H8nssIFPJ3K0+akeeO8fZZkIiw==",
   "success": true,
   "projectFilePath": "D:\\Github\\FernandoCalmet\\Design-Patterns\\patterns_csharp_dotnet\\domain_event\\PetsApp\\Pet.Application\\Pet.Application.csproj",
   "expectedPackageFiles": [],

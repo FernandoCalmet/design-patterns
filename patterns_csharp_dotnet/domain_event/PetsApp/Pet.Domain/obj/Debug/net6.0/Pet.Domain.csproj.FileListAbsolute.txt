@@ -12,7 +12,6 @@ D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsAp
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\aggregate\PetsApp\Pet.Domain\obj\Debug\net6.0\Pet.Domain.csproj.AssemblyReference.cache
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Domain\bin\Debug\net6.0\Pet.Domain.deps.json
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Domain\bin\Debug\net6.0\Pet.Domain.dll
-D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Domain\bin\Debug\net6.0\ref\Pet.Domain.dll
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Domain\bin\Debug\net6.0\Pet.Domain.pdb
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Domain\obj\Debug\net6.0\Pet.Domain.GeneratedMSBuildEditorConfig.editorconfig
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Domain\obj\Debug\net6.0\Pet.Domain.AssemblyInfoInputs.cache
@@ -21,3 +20,5 @@ D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\Pet
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Domain\obj\Debug\net6.0\Pet.Domain.dll
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Domain\obj\Debug\net6.0\ref\Pet.Domain.dll
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Domain\obj\Debug\net6.0\Pet.Domain.pdb
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Domain\obj\Debug\net6.0\Pet.Domain.csproj.AssemblyReference.cache
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Domain\obj\Debug\net6.0\refint\Pet.Domain.dll

@@ -5,7 +5,6 @@ D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\Pet
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Application\obj\Debug\net6.0\Pet.Application.csproj.CoreCompileInputs.cache
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Application\bin\Debug\net6.0\Pet.Application.deps.json
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Application\bin\Debug\net6.0\Pet.Application.dll
-D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Application\bin\Debug\net6.0\ref\Pet.Application.dll
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Application\bin\Debug\net6.0\Pet.Application.pdb
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Application\bin\Debug\net6.0\Pet.Domain.dll
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Application\bin\Debug\net6.0\Pet.Domain.pdb
@@ -13,3 +12,4 @@ D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\Pet
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Application\obj\Debug\net6.0\Pet.Application.dll
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Application\obj\Debug\net6.0\ref\Pet.Application.dll
 D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Application\obj\Debug\net6.0\Pet.Application.pdb
+D:\Github\FernandoCalmet\Design-Patterns\patterns_csharp_dotnet\domain_event\PetsApp\Pet.Application\obj\Debug\net6.0\refint\Pet.Application.dll

@@ -3,9 +3,5 @@
 public class PetDateOfBirthChanged : IDomainEvent
 {
     public DateTime PetDateOfBirth { get; init; }
-
-    public PetDateOfBirthChanged(DateTime petDateOfBirth)
-    {
-        PetDateOfBirth = petDateOfBirth;
-    }
+    public PetDateOfBirthChanged(DateTime petDateOfBirth) { PetDateOfBirth = petDateOfBirth; }
 }

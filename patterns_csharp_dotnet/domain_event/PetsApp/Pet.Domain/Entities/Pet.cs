@@ -1,21 +1,18 @@
-﻿using Pets.Domain.Events;
-
-namespace Pets.Domain.AggregatesModel.PetAggregate;
+﻿namespace Pets.Domain.Entities;
 
 public class Pet
 {
-    private List<IDomainEvent> Events = new();
+    private readonly List<IDomainEvent> Events = new();
     public ICollection<IDomainEvent> DomainEvents => Events;
     public Guid Id { get; init; }
     public PetName Name { get; private set; }
     public PetDateOfBirth DateOfBirth { get; private set; }
 
-    private Pet() { }
+    public Pet() { }
 
-    public Pet(PetName petName, PetDateOfBirth petDateOfBirth)
+    public Pet(PetId id)
     {
-        SetName(petName);
-        SetDateOfBirth(petDateOfBirth);
+        Id = id;
     }
 
     public void SetName(PetName name)

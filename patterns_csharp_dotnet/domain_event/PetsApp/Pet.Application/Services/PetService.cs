@@ -1,71 +1,50 @@
-﻿using Pets.Application.Contracts;
-using Pets.Application.Models;
-
-namespace Pets.Application.Services;
+﻿namespace Pets.Application.Services;
 
 public class PetService : IPetService
 {
-    #region -> Fields
-
     private readonly IMessageBroker _messageBroker;
-    private IPetModel _petModel;
-
-    #endregion -> Fields
-
-    #region -> Constructors
+    private readonly List<Pet> _pets;
 
     public PetService(IMessageBroker messageBroker)
     {
         _messageBroker = messageBroker;
-        _petModel = new PetModel();
+        _pets = new List<Pet>();
     }
 
-    #endregion -> Constructors
-
-    #region -> Public Methods
-
-    public void Create(string name, DateTime dateOfBirth)
+    public void Create(Guid id, string name, DateTime dateOfBirth)
     {
-        var petModel = new PetModel
-        {
-            Id = new Guid(),
-            Name = name,
-            DateOfBirth = dateOfBirth
-        };
-        _petModel.Add(petModel);
+        var pet = new Pet(PetId.Create(id));
+        pet.SetName(PetName.Create(name));
+        pet.SetDateOfBirth(PetDateOfBirth.Create(dateOfBirth));
+        _pets.Add(pet);
 
-        foreach (var domainEvent in petModel.DomainEvents)
+        foreach (var domainEvent in pet.DomainEvents)
         {
             _messageBroker.Publish(domainEvent);
         }
     }
-    public void Update(Guid uid, string name, DateTime dateOfBirth)
+    public void Update(Guid id, string name, DateTime dateOfBirth)
     {
-        var petModel = new PetModel
-        {
-            Id = uid,
-            Name = name,
-            DateOfBirth = dateOfBirth
-        };
-        var petToUpdate = _petModel.Edit(petModel);
+        var pet = _pets.FirstOrDefault(p => p.Id == id);
+        pet.SetName(PetName.Create(name));
+        pet.SetDateOfBirth(PetDateOfBirth.Create(dateOfBirth));
 
-        foreach (var domainEvent in petToUpdate.DomainEvents)
+        foreach (var domainEvent in pet.DomainEvents)
         {
             _messageBroker.Publish(domainEvent);
         }
     }
-    public IEnumerable<PetModel> GetAll()
+    public IEnumerable<Pet> GetAll()
     {
-        return _petModel.GetAll();
+        return _pets;
     }
-    public PetModel? GetSingleById(Guid uid)
+    public Pet? GetSingleById(Guid id)
     {
-        return _petModel.GetSingle(uid);
+        return _pets.FirstOrDefault(p => p.Id == id);
     }
-    public void Delete(Guid uid)
+    public void Delete(Guid id)
     {
-        _petModel.Remove(uid);
+        var pet = _pets.FirstOrDefault(p => p.Id == id);
+        _pets.Remove(pet);
     }
-
-    #endregion -> Public Methods     
 }

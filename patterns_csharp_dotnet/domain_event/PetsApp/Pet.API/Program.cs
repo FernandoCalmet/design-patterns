@@ -1,7 +1,3 @@
-using Pets.API.ViewModel;
-using Pets.Application.Contracts;
-using Pets.Application.Services;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -22,19 +18,40 @@ app.UseHttpsRedirection();
 
 #region -> Fields
 
-IMessageBroker _messageBroker = new MessageBrokerService();
+IMessageBroker _messageBroker = new MessageBroker();
 IPetService petService = new PetService(_messageBroker);
-var petViewModel = new PetViewModel();
-List<PetViewModel> petViewList = new();
 
 #endregion -> Fields
 
 #region -> Endpoints
 
+app.MapPost("/pets", (PetViewModel pet) =>
+{
+    petService.Create(pet.Id, pet.Name, pet.DateOfBirth);
+
+    return Results.Created($"/pets/{pet.Id}", pet);
+})
+.WithName("CreatePet");
+
+app.MapPut("/pets/{id}", (PetViewModel pet) =>
+{
+    petService.Update(pet.Id, pet.Name, pet.DateOfBirth);
+
+    return Results.Ok(pet);
+})
+.WithName("EditPet");
+
+app.MapDelete("/pets/{id}", (Guid guid) =>
+{
+    petService?.Delete(guid);
+
+    return Results.Ok();
+})
+.WithName("RemovePet");
+
 app.MapGet("/pets", () =>
 {
-    petViewList = petViewModel.MapPetViewModel(petService.GetAll());
-    return petViewList;
+    return petService.GetAll();
 })
 .WithName("GetAllPets");
 
@@ -42,37 +59,11 @@ app.MapGet("/pets/{id}", (Guid uid) =>
 {
     var petModel = petService.GetSingleById(uid);
     if (petModel != null)
-        return Results.Ok(petViewModel.MapPetViewModel(petModel));
+        return Results.Ok(petModel);
     else
         return null;
 })
 .WithName("GetSinglePet");
-
-app.MapPost("/pets", (PetViewModel pet) =>
-{
-    var petModel = petViewModel.MapPetModel(pet);
-    petService.Create(petModel.Name, petModel.DateOfBirth);
-
-    return Results.Created($"/pets/{pet.Id}", pet);
-})
-.WithName("CreatePet");
-
-app.MapPut("/pets/{id}", (Guid uid, PetViewModel pet) =>
-{
-    var petModel = petViewModel.MapPetModel(pet);
-    petService.Update(uid, petModel.Name, petModel.DateOfBirth);
-
-    return Results.Ok(pet);
-})
-.WithName("EditPet");
-
-app.MapDelete("/pets/{id}", (Guid uid) =>
-{
-    petService?.Delete(uid);
-
-    return Results.Ok();
-})
-.WithName("RemovePet");
 
 #endregion -> Endpoints
 

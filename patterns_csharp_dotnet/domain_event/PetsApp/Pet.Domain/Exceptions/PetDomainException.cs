@@ -2,9 +2,6 @@
 
 public class PetDomainException : Exception
 {
-    /// <summary>
-    /// Exception type for domain exceptions
-    /// </summary>
     public PetDomainException() { }
 
     public PetDomainException(string message)

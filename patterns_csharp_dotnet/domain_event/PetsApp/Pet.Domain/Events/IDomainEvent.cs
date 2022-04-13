@@ -1,5 +1,3 @@
 ﻿namespace Pets.Domain.Events;
 
-public interface IDomainEvent
-{
-}
+public interface IDomainEvent { }

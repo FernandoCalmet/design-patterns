@@ -3,9 +3,5 @@
 public class PetNameChanged : IDomainEvent
 {
     public string PetName { get; init; }
-
-    public PetNameChanged(string petName)
-    {
-        PetName = petName;
-    }
+    public PetNameChanged(string petName) { PetName = petName; }
 }

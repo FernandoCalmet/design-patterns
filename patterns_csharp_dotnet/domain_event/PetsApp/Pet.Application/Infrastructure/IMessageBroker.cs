@@ -1,6 +1,4 @@
-﻿using Pets.Domain.Events;
-
-namespace Pets.Application.Contracts;
+﻿namespace Pets.Application.Infrastructure;
 
 public interface IMessageBroker
 {
